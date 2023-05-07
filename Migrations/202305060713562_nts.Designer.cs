@@ -7,13 +7,13 @@ namespace FinalWindow.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class ntt : IMigrationMetadata
+    public sealed partial class nts : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ntt));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(nts));
         
         string IMigrationMetadata.Id
         {
-            get { return "202305060630291_ntt"; }
+            get { return "202305060713562_nts"; }
         }
         
         string IMigrationMetadata.Source

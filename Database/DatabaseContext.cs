@@ -10,7 +10,7 @@ namespace FinalWindow.Database
 {
     internal class DatabaseContext : DbContext
     {
-        public DatabaseContext() : base("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=Final;Integrated Security=True")
+        public DatabaseContext() : base("Data Source=LAPTOP-C9DUVST2\\SANG;Initial Catalog=Vehicle;Integrated Security=True")
         {
 
         }
