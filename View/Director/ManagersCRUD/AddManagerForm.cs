@@ -110,7 +110,7 @@ namespace FinalWindow.View.Director
                     return;
                 }
 
-                var checkcardID = db.Users.OfType<Manager>().Where(t => t.cardID == textBox_cardID.Text).Count();
+                var checkcardID = db.Users.OfType<Model.Manager>().Where(t => t.cardID == textBox_cardID.Text).Count();
                 
                 if (checkcardID > 0)
                 {
@@ -120,7 +120,7 @@ namespace FinalWindow.View.Director
 
 
                 
-                var manager = new Manager
+                var manager = new Model.Manager
                 {
                     cardID = textBox_cardID.Text,
                     facilityID = Convert.ToInt32(comboBox_facilityID.SelectedValue.ToString()),

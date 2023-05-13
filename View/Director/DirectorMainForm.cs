@@ -1,6 +1,7 @@
 ﻿using FinalWindow.Database;
 using FinalWindow.Model;
 using FinalWindow.View.Director;
+using FinalWindow.View.Director.FacilityCRUD;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,10 +22,7 @@ namespace FinalWindow
             InitializeComponent();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void loadData()
         {
@@ -89,7 +87,7 @@ namespace FinalWindow
         private void DirectorMainForm_Load(object sender, EventArgs e)
         {
             // Get a reference to the initially selected tab page
-            TabPage selectedTabPage = tabPage_management;
+            TabPage selectedTabPage = tabPage_managerManagement;
 
             // Check if the initially selected tab page contains a DataGridView
             foreach (System.Windows.Forms.Control control in selectedTabPage.Controls)
@@ -122,7 +120,7 @@ namespace FinalWindow
             }
 
 
-            if(selectedTabPage == tabPage_facility)
+            if(selectedTabPage == tabPage_facilityManagement)
             {
                 foreach (System.Windows.Forms.Control control in selectedTabPage.Controls)
                 {
@@ -191,6 +189,18 @@ namespace FinalWindow
         {
             AddManagerForm addManagerForm = new AddManagerForm();
             addManagerForm.Show();
+        }
+
+        private void button_editManager_Click(object sender, EventArgs e)
+        {
+            UpdateManagerForm updateManagerForm = new UpdateManagerForm();
+            updateManagerForm.Show();
+        }
+
+        private void button_updateFacility_Click(object sender, EventArgs e)
+        {
+            UpdateFacilityForm updateFacilityForm = new UpdateFacilityForm();
+            updateFacilityForm.Show();
         }
     }
 }

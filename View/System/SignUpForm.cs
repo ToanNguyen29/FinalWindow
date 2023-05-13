@@ -143,6 +143,11 @@ namespace FinalWindow
                     errorProvider_email.SetError(this.textBox_email, "Email has been used");
                     checkAccount = false;
                 }
+                else
+                {
+                    errorProvider_email = null;
+                    checkAccount = true;
+                }
             }
         }
 

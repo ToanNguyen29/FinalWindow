@@ -22,7 +22,5 @@ namespace FinalWindow.Model
         public int? facilityID { get; set; }
         public Facility Facility { get; set; }
 
-        [MaxLength(50)]
-        public string facilityKeep { get; set; }
     }
 }
