@@ -11,6 +11,7 @@ namespace FinalWindow.Model
     internal class Vehicle
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         public string name { get; set; }
@@ -22,6 +23,9 @@ namespace FinalWindow.Model
         public string status { get; set; }
 
         public string numberVehicle { get; set; }
+
+        [MaxLength(20)]
+        public string licensePlates { get; set; }
 
 
     }

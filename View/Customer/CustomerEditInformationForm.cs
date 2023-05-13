@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalWindow.View.Customer
 {
-    public partial class EditInformationForm : Form
+    public partial class CustomerEditInformationForm : Form
     {
-        public EditInformationForm()
+        public CustomerEditInformationForm()
         {
             InitializeComponent();
         }

@@ -29,6 +29,7 @@ namespace FinalWindow
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
             this.label1 = new System.Windows.Forms.Label();
             this.button_SignUp = new Guna.UI2.WinForms.Guna2Button();
@@ -42,11 +43,21 @@ namespace FinalWindow
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.textBox_Username = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox_Password = new Guna.UI2.WinForms.Guna2TextBox();
+            this.errorProvider_username = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider_email = new System.Windows.Forms.ErrorProvider(this.components);
+            this.textbox_retypePass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.textbox_phone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.errorProvider_phone = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_username)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_email)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_phone)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,9 +65,9 @@ namespace FinalWindow
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(228, 110);
+            this.label1.Location = new System.Drawing.Point(284, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 57);
+            this.label1.Size = new System.Drawing.Size(184, 59);
             this.label1.TabIndex = 23;
             this.label1.Text = "Sign Up";
             // 
@@ -69,17 +80,18 @@ namespace FinalWindow
             this.button_SignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_SignUp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_SignUp.ForeColor = System.Drawing.Color.White;
-            this.button_SignUp.Location = new System.Drawing.Point(36, 465);
+            this.button_SignUp.Location = new System.Drawing.Point(260, 595);
             this.button_SignUp.Name = "button_SignUp";
-            this.button_SignUp.Size = new System.Drawing.Size(559, 45);
+            this.button_SignUp.Size = new System.Drawing.Size(191, 45);
             this.button_SignUp.TabIndex = 6;
             this.button_SignUp.Text = "Sign Up";
+            this.button_SignUp.Click += new System.EventHandler(this.button_SignUp_Click);
             // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(265, 12);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(313, 12);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(113, 95);
@@ -91,6 +103,9 @@ namespace FinalWindow
             // 
             this.guna2GroupBox1.BorderColor = System.Drawing.SystemColors.ButtonShadow;
             this.guna2GroupBox1.BorderRadius = 20;
+            this.guna2GroupBox1.Controls.Add(this.textbox_phone);
+            this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox5);
+            this.guna2GroupBox1.Controls.Add(this.textbox_retypePass);
             this.guna2GroupBox1.Controls.Add(this.textBox_lastName);
             this.guna2GroupBox1.Controls.Add(this.textBox_firstName);
             this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox4);
@@ -105,7 +120,7 @@ namespace FinalWindow
             this.guna2GroupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.guna2GroupBox1.Location = new System.Drawing.Point(36, 182);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(559, 261);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(655, 390);
             this.guna2GroupBox1.TabIndex = 24;
             // 
             // textBox_lastName
@@ -123,13 +138,13 @@ namespace FinalWindow
             this.textBox_lastName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.textBox_lastName.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox_lastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_lastName.Location = new System.Drawing.Point(335, 101);
+            this.textBox_lastName.Location = new System.Drawing.Point(405, 101);
             this.textBox_lastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_lastName.Name = "textBox_lastName";
             this.textBox_lastName.PasswordChar = '\0';
             this.textBox_lastName.PlaceholderText = "Last Name";
             this.textBox_lastName.SelectedText = "";
-            this.textBox_lastName.Size = new System.Drawing.Size(182, 48);
+            this.textBox_lastName.Size = new System.Drawing.Size(198, 48);
             this.textBox_lastName.TabIndex = 4;
             this.textBox_lastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_lastName_KeyPress);
             // 
@@ -148,13 +163,13 @@ namespace FinalWindow
             this.textBox_firstName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.textBox_firstName.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox_firstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_firstName.Location = new System.Drawing.Point(335, 32);
+            this.textBox_firstName.Location = new System.Drawing.Point(405, 32);
             this.textBox_firstName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_firstName.Name = "textBox_firstName";
             this.textBox_firstName.PasswordChar = '\0';
             this.textBox_firstName.PlaceholderText = "First Name";
             this.textBox_firstName.SelectedText = "";
-            this.textBox_firstName.Size = new System.Drawing.Size(182, 48);
+            this.textBox_firstName.Size = new System.Drawing.Size(198, 48);
             this.textBox_firstName.TabIndex = 2;
             this.textBox_firstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_firstName_KeyPress);
             // 
@@ -163,7 +178,7 @@ namespace FinalWindow
             this.guna2CirclePictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CirclePictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox4.Image")));
             this.guna2CirclePictureBox4.ImageRotate = 0F;
-            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(28, 173);
+            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(28, 301);
             this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
             this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox4.Size = new System.Drawing.Size(46, 48);
@@ -186,14 +201,15 @@ namespace FinalWindow
             this.textBox_email.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.textBox_email.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBox_email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_email.Location = new System.Drawing.Point(80, 173);
+            this.textBox_email.Location = new System.Drawing.Point(80, 301);
             this.textBox_email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_email.Name = "textBox_email";
             this.textBox_email.PasswordChar = '\0';
             this.textBox_email.PlaceholderText = "Type your Email";
             this.textBox_email.SelectedText = "";
-            this.textBox_email.Size = new System.Drawing.Size(437, 48);
+            this.textBox_email.Size = new System.Drawing.Size(523, 48);
             this.textBox_email.TabIndex = 5;
+            this.textBox_email.Leave += new System.EventHandler(this.textBox_email_Leave);
             // 
             // guna2CirclePictureBox3
             // 
@@ -244,6 +260,7 @@ namespace FinalWindow
             this.textBox_Username.SelectedText = "";
             this.textBox_Username.Size = new System.Drawing.Size(249, 48);
             this.textBox_Username.TabIndex = 1;
+            this.textBox_Username.Leave += new System.EventHandler(this.textBox_Username_Leave);
             // 
             // textBox_Password
             // 
@@ -269,12 +286,86 @@ namespace FinalWindow
             this.textBox_Password.Size = new System.Drawing.Size(249, 48);
             this.textBox_Password.TabIndex = 3;
             // 
+            // errorProvider_username
+            // 
+            this.errorProvider_username.ContainerControl = this;
+            // 
+            // errorProvider_email
+            // 
+            this.errorProvider_email.ContainerControl = this;
+            // 
+            // textbox_retypePass
+            // 
+            this.textbox_retypePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_retypePass.BorderRadius = 20;
+            this.textbox_retypePass.BorderThickness = 0;
+            this.textbox_retypePass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textbox_retypePass.DefaultText = "";
+            this.textbox_retypePass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textbox_retypePass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textbox_retypePass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textbox_retypePass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textbox_retypePass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_retypePass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.textbox_retypePass.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textbox_retypePass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_retypePass.Location = new System.Drawing.Point(80, 167);
+            this.textbox_retypePass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textbox_retypePass.Name = "textbox_retypePass";
+            this.textbox_retypePass.PasswordChar = '*';
+            this.textbox_retypePass.PlaceholderText = "Confirm your Password";
+            this.textbox_retypePass.SelectedText = "";
+            this.textbox_retypePass.Size = new System.Drawing.Size(249, 48);
+            this.textbox_retypePass.TabIndex = 34;
+            // 
+            // guna2CirclePictureBox5
+            // 
+            this.guna2CirclePictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CirclePictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox5.Image")));
+            this.guna2CirclePictureBox5.ImageRotate = 0F;
+            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(28, 231);
+            this.guna2CirclePictureBox5.Name = "guna2CirclePictureBox5";
+            this.guna2CirclePictureBox5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox5.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox5.TabIndex = 36;
+            this.guna2CirclePictureBox5.TabStop = false;
+            // 
+            // textbox_phone
+            // 
+            this.textbox_phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_phone.BorderRadius = 20;
+            this.textbox_phone.BorderThickness = 0;
+            this.textbox_phone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textbox_phone.DefaultText = "";
+            this.textbox_phone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textbox_phone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textbox_phone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textbox_phone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textbox_phone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_phone.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.textbox_phone.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textbox_phone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_phone.Location = new System.Drawing.Point(80, 231);
+            this.textbox_phone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textbox_phone.Name = "textbox_phone";
+            this.textbox_phone.PasswordChar = '\0';
+            this.textbox_phone.PlaceholderText = "Type your Phone number";
+            this.textbox_phone.SelectedText = "";
+            this.textbox_phone.Size = new System.Drawing.Size(523, 48);
+            this.textbox_phone.TabIndex = 37;
+            this.textbox_phone.Leave += new System.EventHandler(this.textbox_phone_Leave);
+            // 
+            // errorProvider_phone
+            // 
+            this.errorProvider_phone.ContainerControl = this;
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(632, 597);
+            this.ClientSize = new System.Drawing.Size(721, 671);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_SignUp);
@@ -288,6 +379,10 @@ namespace FinalWindow
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_username)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_email)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_phone)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +401,11 @@ namespace FinalWindow
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private Guna.UI2.WinForms.Guna2TextBox textBox_Username;
         private Guna.UI2.WinForms.Guna2TextBox textBox_Password;
+        private System.Windows.Forms.ErrorProvider errorProvider_username;
+        private System.Windows.Forms.ErrorProvider errorProvider_email;
+        private Guna.UI2.WinForms.Guna2TextBox textbox_retypePass;
+        private Guna.UI2.WinForms.Guna2TextBox textbox_phone;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox5;
+        private System.Windows.Forms.ErrorProvider errorProvider_phone;
     }
 }

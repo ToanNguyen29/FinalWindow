@@ -98,7 +98,7 @@
             this.checkBox_rememberMe.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.checkBox_rememberMe.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.checkBox_rememberMe.ForeColor = System.Drawing.Color.Black;
-            this.checkBox_rememberMe.Location = new System.Drawing.Point(210, 191);
+            this.checkBox_rememberMe.Location = new System.Drawing.Point(107, 250);
             this.checkBox_rememberMe.Name = "checkBox_rememberMe";
             this.checkBox_rememberMe.Size = new System.Drawing.Size(150, 27);
             this.checkBox_rememberMe.TabIndex = 3;
@@ -161,7 +161,7 @@
             this.comboBox_role.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.comboBox_role.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.comboBox_role.FocusedState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_role.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_role.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.comboBox_role.ForeColor = System.Drawing.SystemColors.ControlText;
             this.comboBox_role.ItemHeight = 30;
             this.comboBox_role.Items.AddRange(new object[] {
@@ -171,7 +171,7 @@
             "Manager",
             "Director"});
             this.comboBox_role.ItemsAppearance.SelectedFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_role.Location = new System.Drawing.Point(180, 233);
+            this.comboBox_role.Location = new System.Drawing.Point(107, 195);
             this.comboBox_role.MaxDropDownItems = 6;
             this.comboBox_role.Name = "comboBox_role";
             this.comboBox_role.Size = new System.Drawing.Size(182, 36);
@@ -260,7 +260,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(223, 119);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 57);
+            this.label1.Size = new System.Drawing.Size(138, 59);
             this.label1.TabIndex = 12;
             this.label1.Text = "Login";
             // 
@@ -280,6 +280,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
             this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);

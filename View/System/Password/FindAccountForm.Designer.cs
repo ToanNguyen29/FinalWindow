@@ -36,7 +36,7 @@
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textbox_OTP = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.textBox_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -62,6 +62,7 @@
             this.button_Find.Size = new System.Drawing.Size(141, 48);
             this.button_Find.TabIndex = 2;
             this.button_Find.Text = "Find";
+            this.button_Find.Click += new System.EventHandler(this.button_Find_Click);
             // 
             // button_sendCode
             // 
@@ -77,6 +78,7 @@
             this.button_sendCode.Size = new System.Drawing.Size(141, 48);
             this.button_sendCode.TabIndex = 4;
             this.button_sendCode.Text = "Send Code";
+            this.button_sendCode.Click += new System.EventHandler(this.button_sendCode_Click);
             // 
             // label1
             // 
@@ -85,7 +87,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(147, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(387, 57);
+            this.label1.Size = new System.Drawing.Size(395, 59);
             this.label1.TabIndex = 30;
             this.label1.Text = "Find your Account";
             // 
@@ -122,7 +124,7 @@
             this.guna2GroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2GroupBox1.BorderRadius = 20;
             this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2GroupBox1.Controls.Add(this.guna2TextBox1);
+            this.guna2GroupBox1.Controls.Add(this.textbox_OTP);
             this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox4);
             this.guna2GroupBox1.Controls.Add(this.textBox_email);
             this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox2);
@@ -149,29 +151,29 @@
             this.guna2CirclePictureBox1.TabIndex = 38;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // guna2TextBox1
+            // textbox_OTP
             // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.BorderRadius = 20;
-            this.guna2TextBox1.BorderThickness = 0;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(97, 196);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Type your OTP code";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(267, 48);
-            this.guna2TextBox1.TabIndex = 5;
+            this.textbox_OTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_OTP.BorderRadius = 20;
+            this.textbox_OTP.BorderThickness = 0;
+            this.textbox_OTP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textbox_OTP.DefaultText = "";
+            this.textbox_OTP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textbox_OTP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textbox_OTP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textbox_OTP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textbox_OTP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_OTP.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.textbox_OTP.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textbox_OTP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_OTP.Location = new System.Drawing.Point(97, 196);
+            this.textbox_OTP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textbox_OTP.Name = "textbox_OTP";
+            this.textbox_OTP.PasswordChar = '\0';
+            this.textbox_OTP.PlaceholderText = "Type your OTP code";
+            this.textbox_OTP.SelectedText = "";
+            this.textbox_OTP.Size = new System.Drawing.Size(267, 48);
+            this.textbox_OTP.TabIndex = 5;
             // 
             // guna2CirclePictureBox4
             // 
@@ -280,10 +282,10 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox textbox_OTP;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox4;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_email;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_Username;
+        public Guna.UI2.WinForms.Guna2TextBox textBox_Username;
+        public Guna.UI2.WinForms.Guna2TextBox textBox_email;
     }
 }

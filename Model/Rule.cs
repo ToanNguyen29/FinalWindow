@@ -8,21 +8,16 @@ using System.Threading.Tasks;
 
 namespace FinalWindow.Model
 {
-    internal class Accessory
+    internal class Rule
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
-        public string name { get; set; }
+        public string nameContract { get; set; }
 
-        public float? price { get; set; }
+        public string description { get; set; }
 
-        public Accessory()
-        {
-            this.BillFixes = new HashSet<BillFix>();
-        }
-
-        public virtual ICollection<BillFix> BillFixes { get; set; }
+        public virtual ICollection<Contract> Contracts { get; set; }
     }
 }

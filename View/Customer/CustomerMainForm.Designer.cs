@@ -30,9 +30,6 @@
         {
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage_profile = new System.Windows.Forms.TabPage();
-            this.button_editInformation = new Guna.UI2.WinForms.Guna2Button();
-            this.tabPage_booking = new System.Windows.Forms.TabPage();
-            this.tabPage_feedBack = new System.Windows.Forms.TabPage();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.label_birthDate = new System.Windows.Forms.Label();
             this.label_address = new System.Windows.Forms.Label();
@@ -51,6 +48,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.button_editInformation = new Guna.UI2.WinForms.Guna2Button();
+            this.tabPage_booking = new System.Windows.Forms.TabPage();
+            this.tabPage_feedBack = new System.Windows.Forms.TabPage();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage_profile.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
@@ -68,7 +68,7 @@
             this.guna2TabControl1.Location = new System.Drawing.Point(12, 12);
             this.guna2TabControl1.Name = "guna2TabControl1";
             this.guna2TabControl1.SelectedIndex = 0;
-            this.guna2TabControl1.Size = new System.Drawing.Size(921, 611);
+            this.guna2TabControl1.Size = new System.Drawing.Size(961, 611);
             this.guna2TabControl1.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.guna2TabControl1.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.guna2TabControl1.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -97,46 +97,9 @@
             this.tabPage_profile.Location = new System.Drawing.Point(184, 4);
             this.tabPage_profile.Name = "tabPage_profile";
             this.tabPage_profile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_profile.Size = new System.Drawing.Size(733, 603);
+            this.tabPage_profile.Size = new System.Drawing.Size(773, 603);
             this.tabPage_profile.TabIndex = 0;
             this.tabPage_profile.Text = "Profile";
-            // 
-            // button_editInformation
-            // 
-            this.button_editInformation.BorderRadius = 20;
-            this.button_editInformation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_editInformation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_editInformation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_editInformation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_editInformation.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_editInformation.ForeColor = System.Drawing.Color.White;
-            this.button_editInformation.Location = new System.Drawing.Point(6, 409);
-            this.button_editInformation.Name = "button_editInformation";
-            this.button_editInformation.Size = new System.Drawing.Size(710, 84);
-            this.button_editInformation.TabIndex = 1;
-            this.button_editInformation.Text = "Edit your information";
-            this.button_editInformation.Click += new System.EventHandler(this.button_editInformation_Click);
-            // 
-            // tabPage_booking
-            // 
-            this.tabPage_booking.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.tabPage_booking.Location = new System.Drawing.Point(184, 4);
-            this.tabPage_booking.Name = "tabPage_booking";
-            this.tabPage_booking.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_booking.Size = new System.Drawing.Size(733, 603);
-            this.tabPage_booking.TabIndex = 1;
-            this.tabPage_booking.Text = "Booking";
-            this.tabPage_booking.UseVisualStyleBackColor = true;
-            // 
-            // tabPage_feedBack
-            // 
-            this.tabPage_feedBack.Location = new System.Drawing.Point(184, 4);
-            this.tabPage_feedBack.Name = "tabPage_feedBack";
-            this.tabPage_feedBack.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_feedBack.Size = new System.Drawing.Size(733, 603);
-            this.tabPage_feedBack.TabIndex = 2;
-            this.tabPage_feedBack.Text = "Feedback";
-            this.tabPage_feedBack.UseVisualStyleBackColor = true;
             // 
             // guna2GroupBox1
             // 
@@ -352,12 +315,49 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // button_editInformation
+            // 
+            this.button_editInformation.BorderRadius = 20;
+            this.button_editInformation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_editInformation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_editInformation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_editInformation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_editInformation.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_editInformation.ForeColor = System.Drawing.Color.White;
+            this.button_editInformation.Location = new System.Drawing.Point(6, 409);
+            this.button_editInformation.Name = "button_editInformation";
+            this.button_editInformation.Size = new System.Drawing.Size(710, 84);
+            this.button_editInformation.TabIndex = 1;
+            this.button_editInformation.Text = "Edit your information";
+            this.button_editInformation.Click += new System.EventHandler(this.button_editInformation_Click);
+            // 
+            // tabPage_booking
+            // 
+            this.tabPage_booking.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.tabPage_booking.Location = new System.Drawing.Point(184, 4);
+            this.tabPage_booking.Name = "tabPage_booking";
+            this.tabPage_booking.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_booking.Size = new System.Drawing.Size(733, 603);
+            this.tabPage_booking.TabIndex = 1;
+            this.tabPage_booking.Text = "Booking";
+            this.tabPage_booking.UseVisualStyleBackColor = true;
+            // 
+            // tabPage_feedBack
+            // 
+            this.tabPage_feedBack.Location = new System.Drawing.Point(184, 4);
+            this.tabPage_feedBack.Name = "tabPage_feedBack";
+            this.tabPage_feedBack.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_feedBack.Size = new System.Drawing.Size(733, 603);
+            this.tabPage_feedBack.TabIndex = 2;
+            this.tabPage_feedBack.Text = "Feedback";
+            this.tabPage_feedBack.UseVisualStyleBackColor = true;
+            // 
             // CustomerMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(942, 634);
+            this.ClientSize = new System.Drawing.Size(980, 634);
             this.Controls.Add(this.guna2TabControl1);
             this.Name = "CustomerMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

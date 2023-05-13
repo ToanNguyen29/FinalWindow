@@ -11,6 +11,7 @@ namespace FinalWindow.Model
     internal class BillFix
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         [MaxLength(50)]

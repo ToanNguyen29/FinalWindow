@@ -10,10 +10,9 @@ namespace FinalWindow.Model
 {
     internal class Car : Vehicle
     {
-        [MaxLength(20)]
-        public string licensePlates { get; set; }
-
         public int seat { get; set; }
+
+        public virtual ICollection<Contract> Contracts { get; set; }
 
     }
 }

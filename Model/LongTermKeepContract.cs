@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace FinalWindow.Model
 {
-    internal class MonthKeepContract : Contract
+    internal class LongTermKeepContract : Contract
     {
         public string option { get; set; }
 
+        public string type { get; set; }
+        
+        public float period { get; set; }
 
-
-        public int? customerID { get; set; }
-        public Customer Customer { get; set; }
+        
     }
 }

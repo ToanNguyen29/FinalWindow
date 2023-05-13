@@ -67,11 +67,48 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="View\Customer\EditInformationForm.cs">
+    <Compile Include="Migrations\202305130634116_ntt.cs" />
+    <Compile Include="Migrations\202305130634116_ntt.designer.cs">
+      <DependentUpon>202305130634116_ntt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Rule.cs" />
+    <Compile Include="Tool\CheckInput.cs" />
+    <Compile Include="View\Customer\CustomerEditInformationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Customer\EditInformationForm.Designer.cs">
-      <DependentUpon>EditInformationForm.cs</DependentUpon>
+    <Compile Include="View\Customer\CustomerEditInformationForm.Designer.cs">
+      <DependentUpon>CustomerEditInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Director\AddFacilityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Director\AddFacilityForm.Designer.cs">
+      <DependentUpon>AddFacilityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Director\AddManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Director\AddManagerForm.Designer.cs">
+      <DependentUpon>AddManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Director\DirectorEditInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Director\DirectorEditInformationForm.Designer.cs">
+      <DependentUpon>DirectorEditInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Director\ListManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Director\ListManagerForm.Designer.cs">
+      <DependentUpon>ListManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\KeepWorker\AddVehicleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\KeepWorker\AddVehicleForm.Designer.cs">
+      <DependentUpon>AddVehicleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\System\Password\ChangePasswordForm.cs">
       <SubType>Form</SubType>
@@ -128,13 +165,7 @@
     <Compile Include="View\Director\DirectorMainForm.Designer.cs">
       <DependentUpon>DirectorMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202305060713562_nts.cs" />
-    <Compile Include="Migrations\202305060713562_nts.designer.cs">
-      <DependentUpon>202305060713562_nts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Accessory.cs" />
-    <Compile Include="Model\Bicycle.cs" />
     <Compile Include="Model\BillFix.cs" />
     <Compile Include="Model\Car.cs" />
     <Compile Include="Model\Contract.cs" />
@@ -143,24 +174,46 @@
     <Compile Include="Model\Director.cs" />
     <Compile Include="Model\Facility.cs" />
     <Compile Include="Model\FixWorker.cs" />
-    <Compile Include="Model\InstantKeepContract.cs" />
     <Compile Include="Model\KeepWorker.cs" />
     <Compile Include="Model\LoanContract.cs" />
     <Compile Include="Model\Manager.cs" />
-    <Compile Include="Model\MonthKeepContract.cs" />
+    <Compile Include="Model\LongTermKeepContract.cs" />
     <Compile Include="Model\Motor.cs" />
     <Compile Include="Model\Shift.cs" />
     <Compile Include="Model\Truck.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\Vehicle.cs" />
-    <Compile Include="Model\WeekKeepContract.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Migrations\202305130634116_ntt.resx">
+      <DependentUpon>202305130634116_ntt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Customer\CustomerMainForm.resx">
       <DependentUpon>CustomerMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Customer\EditInformationForm.resx">
-      <DependentUpon>EditInformationForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\Customer\CustomerEditInformationForm.resx">
+      <DependentUpon>CustomerEditInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Director\AddFacilityForm.resx">
+      <DependentUpon>AddFacilityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Director\AddManagerForm.resx">
+      <DependentUpon>AddManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Director\ListManagerForm.resx">
+      <DependentUpon>ListManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FixWorker\FixWorkerMainForm.resx">
+      <DependentUpon>FixWorkerMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\KeepWorker\AddVehicleForm.resx">
+      <DependentUpon>AddVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\KeepWorker\KeepWorkerMainForm.resx">
+      <DependentUpon>KeepWorkerMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Manager\ManagerMainForm.resx">
+      <DependentUpon>ManagerMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\System\Password\ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
@@ -170,9 +223,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\System\SignUpForm.resx">
       <DependentUpon>SignUpForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202305060713562_nts.resx">
-      <DependentUpon>202305060713562_nts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

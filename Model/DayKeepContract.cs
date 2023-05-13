@@ -10,9 +10,6 @@ namespace FinalWindow.Model
 {
     internal class DayKeepContract : Contract
     {
-        public string option { get; set; }
-
-        public int? customerID { get; set; }
-        public Customer Customer { get; set; }
+        
     }
 }

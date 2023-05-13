@@ -10,7 +10,7 @@ namespace FinalWindow.Database
 {
     internal class DatabaseContext : DbContext
     {
-        public DatabaseContext() : base("Data Source=LAPTOP-C9DUVST2\\SANG;Initial Catalog=Vehicle;Integrated Security=True")
+        public DatabaseContext() : base("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=Final;Integrated Security=True")
         {
 
         }
@@ -18,6 +18,10 @@ namespace FinalWindow.Database
         public DbSet<Facility> Facilities { get; set; }
         public DbSet<BillFix> BillFixes { get; set; }
         public DbSet<Accessory> Accessories { get; set; }
+        public DbSet<Rule> Rules { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Contract> Contracts { get; set; }
+        public DbSet<Vehicle> Vehicles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -57,11 +61,7 @@ namespace FinalWindow.Database
                 m.ToTable("DayKeepContracts");
             });
 
-            modelBuilder.Entity<InstantKeepContract>().Map(m =>
-            {
-                m.MapInheritedProperties();
-                m.ToTable("InstantKeepContracts");
-            });
+            
 
             modelBuilder.Entity<LoanContract>().Map(m =>
             {
@@ -69,23 +69,14 @@ namespace FinalWindow.Database
                 m.ToTable("LoanContracts");
             });
 
-            modelBuilder.Entity<MonthKeepContract>().Map(m =>
+            modelBuilder.Entity<LongTermKeepContract>().Map(m =>
             {
                 m.MapInheritedProperties();
-                m.ToTable("MonthKeepContracts");
+                m.ToTable("LongTermKeepContracts");
             });
 
-            modelBuilder.Entity<WeekKeepContract>().Map(m =>
-            {
-                m.MapInheritedProperties();
-                m.ToTable("WeekKeepContracts");
-            });
+            
 
-            modelBuilder.Entity<Bicycle>().Map(m =>
-            {
-                m.MapInheritedProperties();
-                m.ToTable("Bicycles");
-            });
 
             modelBuilder.Entity<Car>().Map(m =>
             {

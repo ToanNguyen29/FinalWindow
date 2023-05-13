@@ -46,7 +46,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(158, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(329, 57);
+            this.label1.Size = new System.Drawing.Size(336, 59);
             this.label1.TabIndex = 24;
             this.label1.Text = "Reset Password";
             // 
@@ -134,11 +134,12 @@
             this.button_confirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_confirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_confirm.ForeColor = System.Drawing.Color.White;
-            this.button_confirm.Location = new System.Drawing.Point(135, 360);
+            this.button_confirm.Location = new System.Drawing.Point(150, 360);
             this.button_confirm.Name = "button_confirm";
-            this.button_confirm.Size = new System.Drawing.Size(249, 45);
+            this.button_confirm.Size = new System.Drawing.Size(186, 45);
             this.button_confirm.TabIndex = 3;
             this.button_confirm.Text = "Confirm";
+            this.button_confirm.Click += new System.EventHandler(this.button_confirm_Click);
             // 
             // ChangePasswordForm
             // 

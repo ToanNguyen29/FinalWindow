@@ -10,9 +10,6 @@ namespace FinalWindow.Model
 {
     internal class LoanContract : Contract
     {
-        public DateTime? dateReturn { get; set; }
-
-        public int? customerID { get; set; }
-        public Customer Customer { get; set; }
+        public string condition { get; set; }
     }
 }

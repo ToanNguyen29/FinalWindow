@@ -10,9 +10,8 @@ namespace FinalWindow.Model
 {
     internal class Truck : Vehicle
     {
-        [MaxLength(20)]
-        public string licensePlates { get; set; }
-
         public float tonnage { get; set; }
+
+        public virtual ICollection<Contract> Contracts { get; set; }
     }
 }
