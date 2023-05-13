@@ -1,6 +1,5 @@
 ﻿using FinalWindow.Database;
 using FinalWindow.Model;
-using FinalWindow.Tool;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalWindow.View.Director
+namespace FinalWindow.View.Director.FacilityCRUD
 {
     public partial class AddFacilityForm : Form
     {
@@ -20,7 +19,7 @@ namespace FinalWindow.View.Director
             InitializeComponent();
         }
 
-        private void button_add_Click(object sender, EventArgs e)
+        private void button_addFacility_Click(object sender, EventArgs e)
         {
             try
             {
@@ -28,13 +27,13 @@ namespace FinalWindow.View.Director
                 if (string.IsNullOrEmpty(textBox_facilityAddress.Text) ||
                     string.IsNullOrEmpty(textBox_quantityFix.Text) ||
                     string.IsNullOrEmpty(textBox_quantityKeep.Text))
-                    
+
                 {
                     MessageBox.Show("Please enter all information");
                     return;
                 }
 
-                
+
 
 
                 var facility = new Facility
@@ -57,44 +56,11 @@ namespace FinalWindow.View.Director
             { MessageBox.Show(ex.InnerException.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CirclePictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2GroupBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_facilityAddress_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_quantityKeep_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CirclePictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_quantityFix_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddFacilityForm_Load(object sender, EventArgs e)
         {
 
         }
+
+      
     }
 }

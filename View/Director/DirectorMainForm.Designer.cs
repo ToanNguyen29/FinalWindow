@@ -49,21 +49,25 @@
             this.tabPage_profile = new System.Windows.Forms.TabPage();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tabControl_director = new Guna.UI2.WinForms.Guna2TabControl();
-            this.tabPage_management = new System.Windows.Forms.TabPage();
+            this.tabPage_managerManagement = new System.Windows.Forms.TabPage();
             this.button_resetData = new Guna.UI2.WinForms.Guna2Button();
             this.button_addManager = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView_listManager = new System.Windows.Forms.DataGridView();
-            this.tabPage_facility = new System.Windows.Forms.TabPage();
-            this.dataGridView_listFacility = new System.Windows.Forms.DataGridView();
+            this.tabPage_facilityManagement = new System.Windows.Forms.TabPage();
             this.button_resetFacility = new Guna.UI2.WinForms.Guna2Button();
             this.button_addFacility = new Guna.UI2.WinForms.Guna2Button();
+            this.dataGridView_listFacility = new System.Windows.Forms.DataGridView();
+            this.button_updateManager = new Guna.UI2.WinForms.Guna2Button();
+            this.button_removeManager = new Guna.UI2.WinForms.Guna2Button();
+            this.button_updateFacility = new Guna.UI2.WinForms.Guna2Button();
+            this.button_removeFacility = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.tabPage_profile.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.tabControl_director.SuspendLayout();
-            this.tabPage_management.SuspendLayout();
+            this.tabPage_managerManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listManager)).BeginInit();
-            this.tabPage_facility.SuspendLayout();
+            this.tabPage_facilityManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listFacility)).BeginInit();
             this.SuspendLayout();
             // 
@@ -313,8 +317,8 @@
             // 
             this.tabControl_director.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControl_director.Controls.Add(this.tabPage_profile);
-            this.tabControl_director.Controls.Add(this.tabPage_management);
-            this.tabControl_director.Controls.Add(this.tabPage_facility);
+            this.tabControl_director.Controls.Add(this.tabPage_managerManagement);
+            this.tabControl_director.Controls.Add(this.tabPage_facilityManagement);
             this.tabControl_director.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl_director.ItemSize = new System.Drawing.Size(180, 40);
             this.tabControl_director.Location = new System.Drawing.Point(12, 12);
@@ -340,31 +344,33 @@
             this.tabControl_director.TabIndex = 3;
             this.tabControl_director.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             // 
-            // tabPage_management
+            // tabPage_managerManagement
             // 
-            this.tabPage_management.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
-            this.tabPage_management.Controls.Add(this.button_resetData);
-            this.tabPage_management.Controls.Add(this.button_addManager);
-            this.tabPage_management.Controls.Add(this.dataGridView_listManager);
-            this.tabPage_management.Location = new System.Drawing.Point(184, 4);
-            this.tabPage_management.Name = "tabPage_management";
-            this.tabPage_management.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_management.Size = new System.Drawing.Size(845, 603);
-            this.tabPage_management.TabIndex = 1;
-            this.tabPage_management.Text = "Managers";
+            this.tabPage_managerManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
+            this.tabPage_managerManagement.Controls.Add(this.button_removeManager);
+            this.tabPage_managerManagement.Controls.Add(this.button_updateManager);
+            this.tabPage_managerManagement.Controls.Add(this.button_resetData);
+            this.tabPage_managerManagement.Controls.Add(this.button_addManager);
+            this.tabPage_managerManagement.Controls.Add(this.dataGridView_listManager);
+            this.tabPage_managerManagement.Location = new System.Drawing.Point(184, 4);
+            this.tabPage_managerManagement.Name = "tabPage_managerManagement";
+            this.tabPage_managerManagement.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_managerManagement.Size = new System.Drawing.Size(845, 603);
+            this.tabPage_managerManagement.TabIndex = 1;
+            this.tabPage_managerManagement.Text = "Managers";
             // 
             // button_resetData
             // 
-            this.button_resetData.BorderRadius = 20;
+            this.button_resetData.BorderRadius = 10;
             this.button_resetData.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.button_resetData.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.button_resetData.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.button_resetData.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_resetData.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_resetData.ForeColor = System.Drawing.Color.White;
-            this.button_resetData.Location = new System.Drawing.Point(18, 454);
+            this.button_resetData.Location = new System.Drawing.Point(18, 437);
             this.button_resetData.Name = "button_resetData";
-            this.button_resetData.Size = new System.Drawing.Size(92, 47);
+            this.button_resetData.Size = new System.Drawing.Size(92, 32);
             this.button_resetData.TabIndex = 3;
             this.button_resetData.Text = "Reset";
             this.button_resetData.Click += new System.EventHandler(this.button_resetData_Click);
@@ -378,9 +384,9 @@
             this.button_addManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_addManager.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_addManager.ForeColor = System.Drawing.Color.White;
-            this.button_addManager.Location = new System.Drawing.Point(18, 516);
+            this.button_addManager.Location = new System.Drawing.Point(18, 503);
             this.button_addManager.Name = "button_addManager";
-            this.button_addManager.Size = new System.Drawing.Size(312, 47);
+            this.button_addManager.Size = new System.Drawing.Size(222, 47);
             this.button_addManager.TabIndex = 2;
             this.button_addManager.Text = "Add Manager";
             this.button_addManager.Click += new System.EventHandler(this.button_addManager_Click);
@@ -395,29 +401,20 @@
             this.dataGridView_listManager.Size = new System.Drawing.Size(749, 408);
             this.dataGridView_listManager.TabIndex = 0;
             // 
-            // tabPage_facility
+            // tabPage_facilityManagement
             // 
-            this.tabPage_facility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
-            this.tabPage_facility.Controls.Add(this.button_resetFacility);
-            this.tabPage_facility.Controls.Add(this.button_addFacility);
-            this.tabPage_facility.Controls.Add(this.dataGridView_listFacility);
-            this.tabPage_facility.Location = new System.Drawing.Point(184, 4);
-            this.tabPage_facility.Name = "tabPage_facility";
-            this.tabPage_facility.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_facility.Size = new System.Drawing.Size(845, 603);
-            this.tabPage_facility.TabIndex = 2;
-            this.tabPage_facility.Text = "Facilities";
-            // 
-            // dataGridView_listFacility
-            // 
-            this.dataGridView_listFacility.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_listFacility.Location = new System.Drawing.Point(23, 22);
-            this.dataGridView_listFacility.Name = "dataGridView_listFacility";
-            this.dataGridView_listFacility.RowHeadersWidth = 51;
-            this.dataGridView_listFacility.RowTemplate.Height = 24;
-            this.dataGridView_listFacility.Size = new System.Drawing.Size(749, 408);
-            this.dataGridView_listFacility.TabIndex = 1;
-            this.dataGridView_listFacility.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_listFacility_CellContentClick);
+            this.tabPage_facilityManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
+            this.tabPage_facilityManagement.Controls.Add(this.button_removeFacility);
+            this.tabPage_facilityManagement.Controls.Add(this.button_updateFacility);
+            this.tabPage_facilityManagement.Controls.Add(this.button_resetFacility);
+            this.tabPage_facilityManagement.Controls.Add(this.button_addFacility);
+            this.tabPage_facilityManagement.Controls.Add(this.dataGridView_listFacility);
+            this.tabPage_facilityManagement.Location = new System.Drawing.Point(184, 4);
+            this.tabPage_facilityManagement.Name = "tabPage_facilityManagement";
+            this.tabPage_facilityManagement.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_facilityManagement.Size = new System.Drawing.Size(845, 603);
+            this.tabPage_facilityManagement.TabIndex = 2;
+            this.tabPage_facilityManagement.Text = "Facilities";
             // 
             // button_resetFacility
             // 
@@ -446,10 +443,83 @@
             this.button_addFacility.ForeColor = System.Drawing.Color.White;
             this.button_addFacility.Location = new System.Drawing.Point(23, 509);
             this.button_addFacility.Name = "button_addFacility";
-            this.button_addFacility.Size = new System.Drawing.Size(312, 47);
+            this.button_addFacility.Size = new System.Drawing.Size(222, 47);
             this.button_addFacility.TabIndex = 4;
             this.button_addFacility.Text = "Add Facility";
             this.button_addFacility.Click += new System.EventHandler(this.button_addFacility_Click);
+            // 
+            // dataGridView_listFacility
+            // 
+            this.dataGridView_listFacility.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_listFacility.Location = new System.Drawing.Point(23, 22);
+            this.dataGridView_listFacility.Name = "dataGridView_listFacility";
+            this.dataGridView_listFacility.RowHeadersWidth = 51;
+            this.dataGridView_listFacility.RowTemplate.Height = 24;
+            this.dataGridView_listFacility.Size = new System.Drawing.Size(749, 408);
+            this.dataGridView_listFacility.TabIndex = 1;
+            this.dataGridView_listFacility.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_listFacility_CellContentClick);
+            // 
+            // button_updateManager
+            // 
+            this.button_updateManager.BorderRadius = 20;
+            this.button_updateManager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_updateManager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_updateManager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_updateManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_updateManager.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_updateManager.ForeColor = System.Drawing.Color.White;
+            this.button_updateManager.Location = new System.Drawing.Point(545, 503);
+            this.button_updateManager.Name = "button_updateManager";
+            this.button_updateManager.Size = new System.Drawing.Size(222, 47);
+            this.button_updateManager.TabIndex = 4;
+            this.button_updateManager.Text = "Update Manager";
+            this.button_updateManager.Click += new System.EventHandler(this.button_editManager_Click);
+            // 
+            // button_removeManager
+            // 
+            this.button_removeManager.BorderRadius = 20;
+            this.button_removeManager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_removeManager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_removeManager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_removeManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_removeManager.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_removeManager.ForeColor = System.Drawing.Color.White;
+            this.button_removeManager.Location = new System.Drawing.Point(283, 503);
+            this.button_removeManager.Name = "button_removeManager";
+            this.button_removeManager.Size = new System.Drawing.Size(222, 47);
+            this.button_removeManager.TabIndex = 3;
+            this.button_removeManager.Text = "Remove Manager";
+            // 
+            // button_updateFacility
+            // 
+            this.button_updateFacility.BorderRadius = 20;
+            this.button_updateFacility.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_updateFacility.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_updateFacility.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_updateFacility.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_updateFacility.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_updateFacility.ForeColor = System.Drawing.Color.White;
+            this.button_updateFacility.Location = new System.Drawing.Point(286, 509);
+            this.button_updateFacility.Name = "button_updateFacility";
+            this.button_updateFacility.Size = new System.Drawing.Size(222, 47);
+            this.button_updateFacility.TabIndex = 6;
+            this.button_updateFacility.Text = "Update Facility";
+            this.button_updateFacility.Click += new System.EventHandler(this.button_updateFacility_Click);
+            // 
+            // button_removeFacility
+            // 
+            this.button_removeFacility.BorderRadius = 20;
+            this.button_removeFacility.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_removeFacility.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_removeFacility.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_removeFacility.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_removeFacility.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_removeFacility.ForeColor = System.Drawing.Color.White;
+            this.button_removeFacility.Location = new System.Drawing.Point(550, 509);
+            this.button_removeFacility.Name = "button_removeFacility";
+            this.button_removeFacility.Size = new System.Drawing.Size(222, 47);
+            this.button_removeFacility.TabIndex = 7;
+            this.button_removeFacility.Text = "Remove Facility";
             // 
             // DirectorMainForm
             // 
@@ -466,9 +536,9 @@
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             this.tabControl_director.ResumeLayout(false);
-            this.tabPage_management.ResumeLayout(false);
+            this.tabPage_managerManagement.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listManager)).EndInit();
-            this.tabPage_facility.ResumeLayout(false);
+            this.tabPage_facilityManagement.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listFacility)).EndInit();
             this.ResumeLayout(false);
 
@@ -497,13 +567,17 @@
         private System.Windows.Forms.TabPage tabPage_profile;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2TabControl tabControl_director;
-        private System.Windows.Forms.TabPage tabPage_management;
-        private System.Windows.Forms.TabPage tabPage_facility;
+        private System.Windows.Forms.TabPage tabPage_managerManagement;
+        private System.Windows.Forms.TabPage tabPage_facilityManagement;
         private System.Windows.Forms.DataGridView dataGridView_listManager;
         private Guna.UI2.WinForms.Guna2Button button_addManager;
         private Guna.UI2.WinForms.Guna2Button button_resetData;
         private Guna.UI2.WinForms.Guna2Button button_resetFacility;
         private Guna.UI2.WinForms.Guna2Button button_addFacility;
         private System.Windows.Forms.DataGridView dataGridView_listFacility;
+        private Guna.UI2.WinForms.Guna2Button button_updateManager;
+        private Guna.UI2.WinForms.Guna2Button button_removeManager;
+        private Guna.UI2.WinForms.Guna2Button button_removeFacility;
+        private Guna.UI2.WinForms.Guna2Button button_updateFacility;
     }
 }

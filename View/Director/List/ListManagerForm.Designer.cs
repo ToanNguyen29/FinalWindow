@@ -1,4 +1,4 @@
-﻿namespace FinalWindow.View.Director
+﻿namespace FinalWindow.View.Director.List
 {
     partial class ListManagerForm
     {
@@ -28,39 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView_listManager = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listManager)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView_listManager
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(202, 89);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(471, 212);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView_listManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_listManager.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView_listManager.Name = "dataGridView_listManager";
+            this.dataGridView_listManager.RowHeadersWidth = 51;
+            this.dataGridView_listManager.RowTemplate.Height = 24;
+            this.dataGridView_listManager.Size = new System.Drawing.Size(1490, 415);
+            this.dataGridView_listManager.TabIndex = 0;
+            this.dataGridView_listManager.Click += new System.EventHandler(this.dataGridView_listManager_Click);
             // 
             // ListManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
+            this.ClientSize = new System.Drawing.Size(1514, 450);
+            this.Controls.Add(this.dataGridView_listManager);
             this.Name = "ListManagerForm";
             this.Text = "ListManagerForm";
             this.Load += new System.EventHandler(this.ListManagerForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listManager)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_listManager;
     }
 }
