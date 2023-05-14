@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,9 +15,9 @@ namespace FinalWindow
 {
     public partial class LoginForm : Form
     {
-        private static User user;
+        private static int userID;
 
-        internal static User User { get => user; set => user = value; }
+        public static int UserID { get => userID; set => userID = value; }
 
         public LoginForm()
         {
@@ -60,7 +61,7 @@ namespace FinalWindow
 
             string username = textBox_Username.Text;
             string password = textBox_Password.Text;
-            string role = comboBox_role.Text;
+            string role = comboBox_role.SelectedIndex.ToString();
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
@@ -76,61 +77,68 @@ namespace FinalWindow
 
             var checkUser = databaseContext.Users.Where(t => t.username == username && t.password == password).Count();
 
-            if (role == "Director")
+            if (role == "4")
             {
                 if (checkUser > 0)
                 {
-                    user = databaseContext.Users.OfType<Director>().Where(f => f.username == username).FirstOrDefault();
+                    Director director = databaseContext.Users.OfType<Director>().Where(f => f.username == username).FirstOrDefault();
                     // Login successful, show the main form
                     DirectorMainForm mainFormm = new DirectorMainForm();
+                    UserID = director.ID;
+
                     mainFormm.Show();
+
 
                 }
             }  
             
-            else if(role == "Manager")
+            else if(role == "3")
             {
                 if (checkUser > 0)
                 {
-                    user = databaseContext.Users.OfType<Manager>().Where(f => f.username == username).FirstOrDefault();
+                    Manager manager = databaseContext.Users.OfType<Manager>().Where(f => f.username == username).FirstOrDefault();
                     // Login successful, show the main form
                     ManagerMainForm mainFormm = new ManagerMainForm();
+                    UserID = manager.ID;
                     mainFormm.Show();
 
                 }
             }
 
-            else if (role == "Customer")
+            else if (role == "0")
             {
                 if (checkUser > 0)
                 {
-                    user = databaseContext.Users.OfType<Customer>().Where(f => f.username == username).FirstOrDefault();
+                    Customer customer = databaseContext.Users.OfType<Customer>().Where(f => f.username == username).FirstOrDefault();
                     // Login successful, show the main form
-                    ManagerMainForm mainFormm = new ManagerMainForm();
-                    mainFormm.Show();
+                    CustomerMainForm customerMainFormm = new CustomerMainForm();
+                    UserID = customer.ID;
+                    customerMainFormm.Show();
 
                 }
             }
 
-            else if (role == "FixWorker")
+            else if (role == "1")
             {
                 if (checkUser > 0)
                 {
-                    user = databaseContext.Users.OfType<FixWorker>().Where(f => f.username == username).FirstOrDefault();
+                    FixWorker fixer = databaseContext.Users.OfType<FixWorker>().Where(f => f.username == username).FirstOrDefault();
                     // Login successful, show the main form
                     FixWorkerMainForm mainFormm = new FixWorkerMainForm();
+                    UserID = fixer.ID;
                     mainFormm.Show();
 
                 }
             }
 
-            else 
+            else if (role == "2")
             {
                 if (checkUser > 0)
                 {
-                    user = databaseContext.Users.OfType<KeepWorker>().Where(f => f.username == username).FirstOrDefault();
+                    KeepWorker keeper = databaseContext.Users.OfType<KeepWorker>().Where(f => f.username == username).FirstOrDefault();
                     // Login successful, show the main form
                     KeepWorkerMainForm mainFormm = new KeepWorkerMainForm();
+                    UserID = keeper.ID;
                     mainFormm.Show();
                 }
             }

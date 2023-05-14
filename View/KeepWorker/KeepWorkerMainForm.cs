@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -52,6 +54,42 @@ namespace FinalWindow
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+        }
+
+        private void KeepWorkerMainForm_Load(object sender, EventArgs e)
+        {
+            loadProfile();
+        }
+
+        void loadProfile()
+        {
+            try
+            {
+                DatabaseContext context = new DatabaseContext();
+                var keeper = context.Users.OfType<KeepWorker>().Where(t => t.ID == LoginForm.UserID).FirstOrDefault();
+                if (keeper.picture != null)
+                {
+                    byte[] imageData = (byte[])keeper.picture;
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        pictureBox_profile.Image = Image.FromStream(ms);
+                    }
+                }
+
+                label_username.Text = keeper.username;
+                label_firstName.Text = keeper.firstName;
+                label_lastName.Text = keeper.lastName;
+                label_gender.Text = keeper.gender;
+                label_birthDate.Text = keeper.birthday.Value.Date.ToString("dd/MM/yyyy");
+                label_email.Text = keeper.email;
+                label_phone.Text = keeper.phone;
+                label_address.Text = keeper.address;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }

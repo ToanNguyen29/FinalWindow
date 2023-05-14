@@ -12,6 +12,8 @@ namespace FinalWindow.Model
     {
         public string address { get; set; }
 
+        public byte[] picture { get; set; }
+
         public virtual ICollection<BillFix> BillFixes { get; set; }
         public virtual ICollection<Contract> Contracts { get; set; }
 
