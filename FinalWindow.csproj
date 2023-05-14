@@ -71,6 +71,10 @@
     <Compile Include="Migrations\202305130741250_nts.designer.cs">
       <DependentUpon>202305130741250_nts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305130807451_nts1.cs" />
+    <Compile Include="Migrations\202305130807451_nts1.designer.cs">
+      <DependentUpon>202305130807451_nts1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Rule.cs" />
     <Compile Include="Tool\CheckInput.cs" />
@@ -223,6 +227,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Migrations\202305130741250_nts.resx">
       <DependentUpon>202305130741250_nts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305130807451_nts1.resx">
+      <DependentUpon>202305130807451_nts1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Customer\CustomerMainForm.resx">
       <DependentUpon>CustomerMainForm.cs</DependentUpon>

@@ -42,7 +42,7 @@ namespace FinalWindow.View.Manager.WorkerCRUD
             {
                 OpenFileDialog opf = new OpenFileDialog();
                 opf.Filter = "Select Image (*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
-                if ((opf.ShowDialog() == DialogResult.OK))
+                if ((opf.ShowDialog() == DialogResult.OK)) 
                 {
                     pictureBox_image.Image = Image.FromFile(opf.FileName);
                 }

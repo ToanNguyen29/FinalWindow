@@ -35,7 +35,7 @@
             this.label_gender = new System.Windows.Forms.Label();
             this.label_lastName = new System.Windows.Forms.Label();
             this.label_firstName = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label_username = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,12 +44,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pictureBox_profile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.button_editInformation = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage_profile = new System.Windows.Forms.TabPage();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_profile)).BeginInit();
             this.tabPage_profile.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2TabControl1.SuspendLayout();
@@ -132,16 +132,16 @@
             this.label_firstName.TabIndex = 26;
             this.label_firstName.Text = "First Name";
             // 
-            // label9
+            // label_username
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(32, 40);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 23);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Username";
+            this.label_username.AutoSize = true;
+            this.label_username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.label_username.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_username.Location = new System.Drawing.Point(32, 40);
+            this.label_username.Name = "label_username";
+            this.label_username.Size = new System.Drawing.Size(89, 23);
+            this.label_username.TabIndex = 25;
+            this.label_username.Text = "Username";
             // 
             // label8
             // 
@@ -228,16 +228,16 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "First Name:";
             // 
-            // guna2CirclePictureBox1
+            // pictureBox_profile
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(26, 85);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(108, 99);
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.pictureBox_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.pictureBox_profile.ImageRotate = 0F;
+            this.pictureBox_profile.Location = new System.Drawing.Point(26, 85);
+            this.pictureBox_profile.Name = "pictureBox_profile";
+            this.pictureBox_profile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureBox_profile.Size = new System.Drawing.Size(108, 99);
+            this.pictureBox_profile.TabIndex = 0;
+            this.pictureBox_profile.TabStop = false;
             // 
             // button_editInformation
             // 
@@ -278,7 +278,7 @@
             this.guna2GroupBox1.Controls.Add(this.label_gender);
             this.guna2GroupBox1.Controls.Add(this.label_lastName);
             this.guna2GroupBox1.Controls.Add(this.label_firstName);
-            this.guna2GroupBox1.Controls.Add(this.label9);
+            this.guna2GroupBox1.Controls.Add(this.label_username);
             this.guna2GroupBox1.Controls.Add(this.label8);
             this.guna2GroupBox1.Controls.Add(this.label7);
             this.guna2GroupBox1.Controls.Add(this.label6);
@@ -287,7 +287,7 @@
             this.guna2GroupBox1.Controls.Add(this.label3);
             this.guna2GroupBox1.Controls.Add(this.label2);
             this.guna2GroupBox1.Controls.Add(this.label1);
-            this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2GroupBox1.Controls.Add(this.pictureBox_profile);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -335,7 +335,8 @@
             this.Controls.Add(this.guna2TabControl1);
             this.Name = "FixWorkerMainForm";
             this.Text = "FixWorkerMainForm";
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.FixWorkerMainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_profile)).EndInit();
             this.tabPage_profile.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
@@ -353,7 +354,7 @@
         private System.Windows.Forms.Label label_gender;
         private System.Windows.Forms.Label label_lastName;
         private System.Windows.Forms.Label label_firstName;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label_username;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -362,7 +363,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox_profile;
         private Guna.UI2.WinForms.Guna2Button button_editInformation;
         private System.Windows.Forms.TabPage tabPage_profile;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;

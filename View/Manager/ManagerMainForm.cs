@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -102,6 +103,41 @@ namespace FinalWindow
         {
             UpdateWorkerForm updateWorkerForm = new UpdateWorkerForm();
             updateWorkerForm.Show();
+        }
+
+        private void ManagerMainForm_Load(object sender, EventArgs e)
+        {
+            loadProfile();
+        }
+
+        void loadProfile()
+        {
+            try
+            {
+                DatabaseContext context = new DatabaseContext();
+                var manager = context.Users.OfType<Manager>().Where(t => t.ID == LoginForm.UserID).FirstOrDefault();
+                if (manager.picture != null)
+                {
+                    byte[] imageData = (byte[])manager.picture;
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        pictureBox_managerImage.Image = Image.FromStream(ms);
+                    }
+                }
+                label_username.Text = manager.username;
+                label_firstName.Text = manager.firstName;
+                label_lastName.Text = manager.lastName;
+                label_gender.Text = manager.gender;
+                label_birthDate.Text = manager.birthday.Value.Date.ToString("dd/MM/yyyy");
+                label_email.Text = manager.email;
+                label_phone.Text = manager.phone;
+                label_address.Text = manager.address;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }
