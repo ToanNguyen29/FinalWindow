@@ -26,13 +26,10 @@ namespace FinalWindow.Database
         public DbSet<Contract> Contracts { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<Shift> Shifts { get; set; }
+
         public DbSet<FeeKeep> FeeKeeps { get; set; }
 
-        /*public static DatabaseContext GetInstance()
-        {
-            // Return the single instance of the class
-            return instance.Value;
-        }*/
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

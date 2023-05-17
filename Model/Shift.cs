@@ -11,11 +11,10 @@ namespace FinalWindow.Model
     internal class Shift
     {
         [Key]
-        public int ID { get; set; }
+        public int ID { get; set; }     
+        public TimeSpan startTime { get; set; }
 
-        public DateTime startTime { get; set; }
-
-        public DateTime endTime { get; set; }
+        public TimeSpan endTime { get; set; }
 
         public int? quantityKeep { get; set; }
 
@@ -23,5 +22,7 @@ namespace FinalWindow.Model
 
         public virtual ICollection<FixWorker> FixWorkers { get; set; }
         public virtual ICollection<KeepWorker> KeepWorkers { get; set; }
+
+        
     }
 }

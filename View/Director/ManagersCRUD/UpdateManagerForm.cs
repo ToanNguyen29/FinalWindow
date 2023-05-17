@@ -88,12 +88,8 @@ namespace FinalWindow.View.Director
                 {
                     MessageBox.Show("Cannot update !!");
                 }
-
-
-
-
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Update fail");
             }

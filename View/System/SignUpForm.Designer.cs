@@ -46,18 +46,26 @@ namespace FinalWindow
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.textBox_Username = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox_Password = new Guna.UI2.WinForms.Guna2TextBox();
+
             this.errorProvider_username = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider_email = new System.Windows.Forms.ErrorProvider(this.components);
+
             this.errorProvider_phone = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider_email = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider_username = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_email)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_phone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_email)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_username)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,7 +75,7 @@ namespace FinalWindow
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(284, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 59);
+            this.label1.Size = new System.Drawing.Size(180, 57);
             this.label1.TabIndex = 23;
             this.label1.Text = "Sign Up";
             // 
@@ -348,17 +356,21 @@ namespace FinalWindow
             this.textBox_Password.Size = new System.Drawing.Size(249, 48);
             this.textBox_Password.TabIndex = 3;
             // 
-            // errorProvider_username
+            // errorProvider_phone
             // 
-            this.errorProvider_username.ContainerControl = this;
+            this.errorProvider_phone.ContainerControl = this;
             // 
             // errorProvider_email
             // 
             this.errorProvider_email.ContainerControl = this;
             // 
+
             // errorProvider_phone
+
+            // errorProvider_username
+
             // 
-            this.errorProvider_phone.ContainerControl = this;
+            this.errorProvider_username.ContainerControl = this;
             // 
             // SignUpForm
             // 
@@ -380,9 +392,13 @@ namespace FinalWindow
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_email)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_phone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_email)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_username)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,11 +417,11 @@ namespace FinalWindow
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private Guna.UI2.WinForms.Guna2TextBox textBox_Username;
         private Guna.UI2.WinForms.Guna2TextBox textBox_Password;
-        private System.Windows.Forms.ErrorProvider errorProvider_username;
-        private System.Windows.Forms.ErrorProvider errorProvider_email;
         private Guna.UI2.WinForms.Guna2TextBox textbox_retypePass;
         private Guna.UI2.WinForms.Guna2TextBox textbox_phone;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox5;
         private System.Windows.Forms.ErrorProvider errorProvider_phone;
+        private System.Windows.Forms.ErrorProvider errorProvider_email;
+        private System.Windows.Forms.ErrorProvider errorProvider_username;
     }
 }

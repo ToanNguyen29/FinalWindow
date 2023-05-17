@@ -1,4 +1,5 @@
 ﻿using FinalWindow.Database;
+using FinalWindow.Model;
 using FinalWindow.Tool;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,66 @@ namespace FinalWindow.View.Manager.WorkerCRUD
             comboBox_facilityID.SelectedItem = null;
         }
 
+        void loadKeepDataGridView()
+        {
+            try
+            {
+                DatabaseContext context1 = new DatabaseContext();
+                var manager = context1.Users.OfType<Model.Manager>().Where(t => t.ID == ManagerMainForm.ManID).FirstOrDefault();
+                using (var context = new DatabaseContext())
+                {
+                    var keeperData = context.Users.OfType<Model.KeepWorker>().Where(t => t.facilityID == manager.facilityID)
+                        .Select(u => new
+                        {
+                            CardID = u.cardID,
+                            FisrtName = u.firstName,
+                            LastName = u.lastName,
+                            Gender = u.gender,
+                            Phone = u.phone,
+                            FacilityID = u.facilityID
+
+                        })
+                        .ToList();
+
+
+                    ManagerMainForm managerMainForm = new ManagerMainForm();
+                    managerMainForm.dataGridView_listKeepWorker.DataSource = keeperData;
+                }
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+        void loadFixDataGridView()
+        {
+            try
+            {
+                DatabaseContext context1 = new DatabaseContext();
+                var manager = context1.Users.OfType<Model.Manager>().Where(t => t.ID == ManagerMainForm.ManID).FirstOrDefault();
+                using (var context = new DatabaseContext())
+                {
+                    var fixerData = context.Users.OfType<Model.FixWorker>().Where(t => t.facilityID == manager.facilityID)
+                        // .Where(u => u.cardID)
+                        .Select(u => new
+                        {
+                            CardID = u.cardID,
+                            FisrtName = u.firstName,
+                            LastName = u.lastName,
+                            Gender = u.gender,
+                            Phone = u.phone,
+                            FacilityID = u.facilityID
+
+                        })
+                        .ToList();
+
+
+                    ManagerMainForm managerMainForm = new ManagerMainForm();
+                    managerMainForm.dataGridView_listFixWorker.DataSource = fixerData;
+                }
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
         private void pictureBox_image_Click(object sender, EventArgs e)
         {
             try
@@ -65,7 +126,8 @@ namespace FinalWindow.View.Manager.WorkerCRUD
                     string.IsNullOrEmpty(textBox_phone.Text) ||
                     string.IsNullOrEmpty(textBox_email.Text) ||
                     string.IsNullOrEmpty(textBox_address.Text) ||
-                    (comboBox_gender.SelectedItem == null))
+                    (comboBox_gender.SelectedItem == null) ||
+                    (comboBox_facilityID.SelectedItem == null))
                 {
                     MessageBox.Show("Please enter all information");
                     return;
@@ -122,6 +184,15 @@ namespace FinalWindow.View.Manager.WorkerCRUD
                     return;
                 }
 
+                var checkcardID = db.Users.OfType<Model.FixWorker>().Where(t => t.cardID == textBox_cardID.Text).Count();
+                var checkcardID2 = db.Users.OfType<Model.KeepWorker>().Where(t => t.cardID == textBox_cardID.Text).Count();
+
+                if (checkcardID > 0 && checkcardID2 > 0)
+                {
+                    MessageBox.Show("Card ID already exist.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 //if (CheckInput.CheckYear(birthday_picker.Text) == false)
                 //{
                 //    MessageBox.Show("Student is invalid age");
@@ -134,14 +205,7 @@ namespace FinalWindow.View.Manager.WorkerCRUD
                     return;
                 }
 
-                var checkcardID = db.Users.OfType<Model.Manager>().Where(t => t.cardID == textBox_cardID.Text).Count();
-
-                if (checkcardID > 0)
-                {
-                    MessageBox.Show("Card ID already exist.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
+                
 
                 if(comboBox_typeWorker.SelectedIndex == 0)
                 {
@@ -165,6 +229,7 @@ namespace FinalWindow.View.Manager.WorkerCRUD
                     {
                         db.Users.Add(fixWorker);
                         db.SaveChanges();
+                        
                         MessageBox.Show("Add successfully.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
@@ -192,6 +257,7 @@ namespace FinalWindow.View.Manager.WorkerCRUD
                     {
                         db.Users.Add(keepWorker);
                         db.SaveChanges();
+                        
                         MessageBox.Show("Add successfully.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)

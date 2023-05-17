@@ -30,9 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerEditInformationForm));
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.birthday_picker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.textBox_address = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboBox_gender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.textBox_phone = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox_lastName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -43,21 +44,25 @@
             this.textBox_firstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.button_edit = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox_image = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.label_username = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_image)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.BorderColor = System.Drawing.SystemColors.ButtonShadow;
             this.guna2GroupBox1.BorderRadius = 20;
+            this.guna2GroupBox1.Controls.Add(this.birthday_picker);
             this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox5);
             this.guna2GroupBox1.Controls.Add(this.textBox_address);
-            this.guna2GroupBox1.Controls.Add(this.guna2ComboBox1);
+            this.guna2GroupBox1.Controls.Add(this.comboBox_gender);
             this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2GroupBox1.Controls.Add(this.textBox_phone);
             this.guna2GroupBox1.Controls.Add(this.textBox_lastName);
@@ -70,10 +75,28 @@
             this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(13, 84);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(13, 205);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(559, 390);
             this.guna2GroupBox1.TabIndex = 25;
+            // 
+            // birthday_picker
+            // 
+            this.birthday_picker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.birthday_picker.BorderRadius = 20;
+            this.birthday_picker.Checked = true;
+            this.birthday_picker.CustomFormat = "MM/dd/yyyy";
+            this.birthday_picker.FillColor = System.Drawing.Color.White;
+            this.birthday_picker.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthday_picker.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.birthday_picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.birthday_picker.Location = new System.Drawing.Point(316, 101);
+            this.birthday_picker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.birthday_picker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.birthday_picker.Name = "birthday_picker";
+            this.birthday_picker.Size = new System.Drawing.Size(201, 36);
+            this.birthday_picker.TabIndex = 39;
+            this.birthday_picker.Value = new System.DateTime(2023, 5, 9, 19, 28, 5, 329);
             // 
             // guna2CirclePictureBox5
             // 
@@ -112,26 +135,26 @@
             this.textBox_address.Size = new System.Drawing.Size(437, 48);
             this.textBox_address.TabIndex = 37;
             // 
-            // guna2ComboBox1
+            // comboBox_gender
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.BorderRadius = 20;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.comboBox_gender.BackColor = System.Drawing.Color.Transparent;
+            this.comboBox_gender.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox_gender.BorderRadius = 20;
+            this.comboBox_gender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_gender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox_gender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox_gender.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_gender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBox_gender.ItemHeight = 30;
+            this.comboBox_gender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(80, 101);
-            this.guna2ComboBox1.MaxDropDownItems = 2;
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(191, 36);
-            this.guna2ComboBox1.TabIndex = 36;
+            this.comboBox_gender.Location = new System.Drawing.Point(80, 101);
+            this.comboBox_gender.MaxDropDownItems = 2;
+            this.comboBox_gender.Name = "comboBox_gender";
+            this.comboBox_gender.Size = new System.Drawing.Size(191, 36);
+            this.comboBox_gender.TabIndex = 36;
             // 
             // guna2CirclePictureBox1
             // 
@@ -290,40 +313,70 @@
             this.button_edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_edit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_edit.ForeColor = System.Drawing.Color.White;
-            this.button_edit.Location = new System.Drawing.Point(202, 489);
+            this.button_edit.Location = new System.Drawing.Point(196, 601);
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(182, 45);
             this.button_edit.TabIndex = 26;
             this.button_edit.Text = "Edit";
+            this.button_edit.Click += new System.EventHandler(this.button_edit_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 25.2F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(112, 9);
+            this.label1.Location = new System.Drawing.Point(128, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(358, 59);
+            this.label1.Size = new System.Drawing.Size(350, 57);
             this.label1.TabIndex = 27;
             this.label1.Text = "Edit Information";
             // 
-            // CustomerEditInformationForm
+            // pictureBox_image
+            // 
+            this.pictureBox_image.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
+            this.pictureBox_image.ImageRotate = 0F;
+            this.pictureBox_image.Location = new System.Drawing.Point(329, 69);
+            this.pictureBox_image.Name = "pictureBox_image";
+            this.pictureBox_image.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureBox_image.Size = new System.Drawing.Size(110, 106);
+            this.pictureBox_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_image.TabIndex = 43;
+            this.pictureBox_image.TabStop = false;
+            this.pictureBox_image.Click += new System.EventHandler(this.pictureBox_image_Click);
+            // 
+            // label_username
+            // 
+            this.label_username.AutoSize = true;
+            this.label_username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
+            this.label_username.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_username.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_username.Location = new System.Drawing.Point(166, 111);
+            this.label_username.Name = "label_username";
+            this.label_username.Size = new System.Drawing.Size(89, 23);
+            this.label_username.TabIndex = 44;
+            this.label_username.Text = "Username";
+            // 
+            // EditInformationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(584, 546);
+            this.ClientSize = new System.Drawing.Size(584, 659);
+            this.Controls.Add(this.label_username);
+            this.Controls.Add(this.pictureBox_image);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_edit);
             this.Controls.Add(this.guna2GroupBox1);
-            this.Name = "CustomerEditInformationForm";
+            this.Name = "EditInformationForm";
             this.Text = "EditInformationForm";
+            this.Load += new System.EventHandler(this.CustomerEditInformationForm_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,18 +385,21 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_lastName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox4;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_email;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_firstName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_phone;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox5;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_address;
         private Guna.UI2.WinForms.Guna2Button button_edit;
         private System.Windows.Forms.Label label1;
+        public Guna.UI2.WinForms.Guna2DateTimePicker birthday_picker;
+        public Guna.UI2.WinForms.Guna2TextBox textBox_lastName;
+        public Guna.UI2.WinForms.Guna2TextBox textBox_email;
+        public Guna.UI2.WinForms.Guna2TextBox textBox_firstName;
+        public Guna.UI2.WinForms.Guna2TextBox textBox_phone;
+        public Guna.UI2.WinForms.Guna2ComboBox comboBox_gender;
+        public Guna.UI2.WinForms.Guna2TextBox textBox_address;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox_image;
+        public System.Windows.Forms.Label label_username;
     }
 }

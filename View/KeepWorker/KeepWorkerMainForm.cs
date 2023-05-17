@@ -1,6 +1,9 @@
 ﻿using FinalWindow.Database;
 using FinalWindow.Model;
 
+using FinalWindow.View.Customer;
+using FinalWindow.View.KeepWorker;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,10 +20,15 @@ namespace FinalWindow
 {
     public partial class KeepWorkerMainForm : Form
     {
+        private static int keepID;
+        public static int KeepID { get => keepID; set => keepID = value; }
+
         public KeepWorkerMainForm()
         {
             InitializeComponent();
         }
+
+        
 
         private void button_addVehicle_Click(object sender, EventArgs e)
         {
@@ -94,7 +102,6 @@ namespace FinalWindow
 
         }
 
-        
 
 
         private void button_UploadPlate_Click(object sender, EventArgs e)
@@ -1005,6 +1012,18 @@ namespace FinalWindow
         } 
            
             
+
+        private void button_editInformation_Click(object sender, EventArgs e)
+        {
+            KeepWorkerEditInformationForm editInformationForm = new KeepWorkerEditInformationForm();
+            editInformationForm.Show();
+        }
+
+        private void button_reset_Click(object sender, EventArgs e)
+        {
+            loadProfile();
+        }
+
     }
     
 }

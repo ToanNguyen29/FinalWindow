@@ -1,4 +1,6 @@
 ﻿using FinalWindow.View.Director;
+using FinalWindow.View.Director.FacilityCRUD;
+using FinalWindow.View.Manager.ShiftCRUD;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +22,8 @@ namespace FinalWindow
            
 
             Application.Run(new LoginForm());
+            //Application.Run(new ShiftWorkForm());
+            //Application.Run(new UpdateManagerForm());
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using FinalWindow.Database;
 using FinalWindow.Model;
+using FinalWindow.View.Customer;
+using FinalWindow.View.FixWorker;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,13 +18,17 @@ namespace FinalWindow
     public partial class FixWorkerMainForm : Form
     {
 
+
         private static int fixID;
+
         public FixWorkerMainForm()
         {
             InitializeComponent();
         }
 
+
         public static int FixID { get => fixID; set => fixID = value; }
+
 
         private void FixWorkerMainForm_Load(object sender, EventArgs e)
         {
@@ -59,6 +65,17 @@ namespace FinalWindow
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void button_editInformation_Click(object sender, EventArgs e)
+        {
+            FixWorkerEditInformationForm form = new FixWorkerEditInformationForm();
+            form.Show();
+        }
+
+        private void button_reset_Click(object sender, EventArgs e)
+        {
+            loadProfile();
         }
     }
 }
