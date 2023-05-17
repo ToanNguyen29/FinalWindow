@@ -35,6 +35,9 @@ namespace FinalWindow
             this.button_SignUp = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.textbox_phone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.textbox_retypePass = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox_lastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox_firstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -45,18 +48,15 @@ namespace FinalWindow
             this.textBox_Password = new Guna.UI2.WinForms.Guna2TextBox();
             this.errorProvider_username = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider_email = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textbox_retypePass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CirclePictureBox5 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.textbox_phone = new Guna.UI2.WinForms.Guna2TextBox();
             this.errorProvider_phone = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_username)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_email)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_phone)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,6 +122,68 @@ namespace FinalWindow
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(655, 390);
             this.guna2GroupBox1.TabIndex = 24;
+            // 
+            // textbox_phone
+            // 
+            this.textbox_phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_phone.BorderRadius = 20;
+            this.textbox_phone.BorderThickness = 0;
+            this.textbox_phone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textbox_phone.DefaultText = "";
+            this.textbox_phone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textbox_phone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textbox_phone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textbox_phone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textbox_phone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_phone.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.textbox_phone.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textbox_phone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_phone.Location = new System.Drawing.Point(80, 231);
+            this.textbox_phone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textbox_phone.Name = "textbox_phone";
+            this.textbox_phone.PasswordChar = '\0';
+            this.textbox_phone.PlaceholderText = "Type your Phone number";
+            this.textbox_phone.SelectedText = "";
+            this.textbox_phone.Size = new System.Drawing.Size(523, 48);
+            this.textbox_phone.TabIndex = 37;
+            this.textbox_phone.Leave += new System.EventHandler(this.textbox_phone_Leave);
+            // 
+            // guna2CirclePictureBox5
+            // 
+            this.guna2CirclePictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CirclePictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox5.Image")));
+            this.guna2CirclePictureBox5.ImageRotate = 0F;
+            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(28, 231);
+            this.guna2CirclePictureBox5.Name = "guna2CirclePictureBox5";
+            this.guna2CirclePictureBox5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox5.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox5.TabIndex = 36;
+            this.guna2CirclePictureBox5.TabStop = false;
+            // 
+            // textbox_retypePass
+            // 
+            this.textbox_retypePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_retypePass.BorderRadius = 20;
+            this.textbox_retypePass.BorderThickness = 0;
+            this.textbox_retypePass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textbox_retypePass.DefaultText = "";
+            this.textbox_retypePass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textbox_retypePass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textbox_retypePass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textbox_retypePass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textbox_retypePass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_retypePass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.textbox_retypePass.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textbox_retypePass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textbox_retypePass.Location = new System.Drawing.Point(80, 167);
+            this.textbox_retypePass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textbox_retypePass.Name = "textbox_retypePass";
+            this.textbox_retypePass.PasswordChar = '*';
+            this.textbox_retypePass.PlaceholderText = "Confirm your Password";
+            this.textbox_retypePass.SelectedText = "";
+            this.textbox_retypePass.Size = new System.Drawing.Size(249, 48);
+            this.textbox_retypePass.TabIndex = 34;
             // 
             // textBox_lastName
             // 
@@ -294,68 +356,6 @@ namespace FinalWindow
             // 
             this.errorProvider_email.ContainerControl = this;
             // 
-            // textbox_retypePass
-            // 
-            this.textbox_retypePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textbox_retypePass.BorderRadius = 20;
-            this.textbox_retypePass.BorderThickness = 0;
-            this.textbox_retypePass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textbox_retypePass.DefaultText = "";
-            this.textbox_retypePass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textbox_retypePass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textbox_retypePass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textbox_retypePass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textbox_retypePass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textbox_retypePass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.textbox_retypePass.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textbox_retypePass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textbox_retypePass.Location = new System.Drawing.Point(80, 167);
-            this.textbox_retypePass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textbox_retypePass.Name = "textbox_retypePass";
-            this.textbox_retypePass.PasswordChar = '*';
-            this.textbox_retypePass.PlaceholderText = "Confirm your Password";
-            this.textbox_retypePass.SelectedText = "";
-            this.textbox_retypePass.Size = new System.Drawing.Size(249, 48);
-            this.textbox_retypePass.TabIndex = 34;
-            // 
-            // guna2CirclePictureBox5
-            // 
-            this.guna2CirclePictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CirclePictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox5.Image")));
-            this.guna2CirclePictureBox5.ImageRotate = 0F;
-            this.guna2CirclePictureBox5.Location = new System.Drawing.Point(28, 231);
-            this.guna2CirclePictureBox5.Name = "guna2CirclePictureBox5";
-            this.guna2CirclePictureBox5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox5.Size = new System.Drawing.Size(46, 48);
-            this.guna2CirclePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox5.TabIndex = 36;
-            this.guna2CirclePictureBox5.TabStop = false;
-            // 
-            // textbox_phone
-            // 
-            this.textbox_phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textbox_phone.BorderRadius = 20;
-            this.textbox_phone.BorderThickness = 0;
-            this.textbox_phone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textbox_phone.DefaultText = "";
-            this.textbox_phone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textbox_phone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textbox_phone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textbox_phone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textbox_phone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textbox_phone.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.textbox_phone.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textbox_phone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textbox_phone.Location = new System.Drawing.Point(80, 231);
-            this.textbox_phone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textbox_phone.Name = "textbox_phone";
-            this.textbox_phone.PasswordChar = '\0';
-            this.textbox_phone.PlaceholderText = "Type your Phone number";
-            this.textbox_phone.SelectedText = "";
-            this.textbox_phone.Size = new System.Drawing.Size(523, 48);
-            this.textbox_phone.TabIndex = 37;
-            this.textbox_phone.Leave += new System.EventHandler(this.textbox_phone_Leave);
-            // 
             // errorProvider_phone
             // 
             this.errorProvider_phone.ContainerControl = this;
@@ -376,12 +376,12 @@ namespace FinalWindow
             this.Load += new System.EventHandler(this.SignUpForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_username)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_email)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_phone)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeepWorkerMainForm));
             this.label_birthDate = new System.Windows.Forms.Label();
             this.label_address = new System.Windows.Forms.Label();
             this.label_email = new System.Windows.Forms.Label();
@@ -50,15 +51,33 @@
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage_vehicle = new System.Windows.Forms.TabPage();
-            this.button_resetVehicle = new Guna.UI2.WinForms.Guna2Button();
-            this.button_addVehicle = new Guna.UI2.WinForms.Guna2Button();
-            this.dataGridView_listVehicle = new System.Windows.Forms.DataGridView();
+            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.comboBox_TypeVehicle = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.button_UploadPlate = new System.Windows.Forms.Button();
+            this.pictureBox_ImagePlate = new System.Windows.Forms.PictureBox();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.button_InOut = new Guna.UI2.WinForms.Guna2Button();
+            this.textBox_Key = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.textBox_LicensePlate = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Genderpanel = new System.Windows.Forms.Panel();
+            this.radioButton_Out = new System.Windows.Forms.RadioButton();
+            this.radioButton_In = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button_select = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_profile)).BeginInit();
             this.tabPage_profile.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage_vehicle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listVehicle)).BeginInit();
+            this.guna2GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ImagePlate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
+            this.Genderpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_birthDate
@@ -313,7 +332,7 @@
             this.guna2TabControl1.Location = new System.Drawing.Point(12, 12);
             this.guna2TabControl1.Name = "guna2TabControl1";
             this.guna2TabControl1.SelectedIndex = 0;
-            this.guna2TabControl1.Size = new System.Drawing.Size(1036, 611);
+            this.guna2TabControl1.Size = new System.Drawing.Size(1036, 724);
             this.guna2TabControl1.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.guna2TabControl1.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.guna2TabControl1.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -336,64 +355,269 @@
             // tabPage_vehicle
             // 
             this.tabPage_vehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
-            this.tabPage_vehicle.Controls.Add(this.button_resetVehicle);
-            this.tabPage_vehicle.Controls.Add(this.button_addVehicle);
-            this.tabPage_vehicle.Controls.Add(this.dataGridView_listVehicle);
+            this.tabPage_vehicle.Controls.Add(this.button_select);
+            this.tabPage_vehicle.Controls.Add(this.guna2GroupBox2);
+            this.tabPage_vehicle.Controls.Add(this.label9);
+            this.tabPage_vehicle.Controls.Add(this.Genderpanel);
+            this.tabPage_vehicle.Controls.Add(this.label10);
             this.tabPage_vehicle.Location = new System.Drawing.Point(184, 4);
             this.tabPage_vehicle.Name = "tabPage_vehicle";
             this.tabPage_vehicle.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_vehicle.Size = new System.Drawing.Size(848, 603);
+            this.tabPage_vehicle.Size = new System.Drawing.Size(848, 716);
             this.tabPage_vehicle.TabIndex = 1;
             this.tabPage_vehicle.Text = "Vehicle";
             // 
-            // button_resetVehicle
+            // guna2GroupBox2
             // 
-            this.button_resetVehicle.BorderRadius = 20;
-            this.button_resetVehicle.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_resetVehicle.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_resetVehicle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_resetVehicle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_resetVehicle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_resetVehicle.ForeColor = System.Drawing.Color.White;
-            this.button_resetVehicle.Location = new System.Drawing.Point(23, 459);
-            this.button_resetVehicle.Name = "button_resetVehicle";
-            this.button_resetVehicle.Size = new System.Drawing.Size(92, 47);
-            this.button_resetVehicle.TabIndex = 8;
-            this.button_resetVehicle.Text = "Reset";
-            this.button_resetVehicle.Click += new System.EventHandler(this.button_resetVehicle_Click);
+            this.guna2GroupBox2.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.guna2GroupBox2.BorderRadius = 20;
+            this.guna2GroupBox2.Controls.Add(this.comboBox_TypeVehicle);
+            this.guna2GroupBox2.Controls.Add(this.button_UploadPlate);
+            this.guna2GroupBox2.Controls.Add(this.pictureBox_ImagePlate);
+            this.guna2GroupBox2.Controls.Add(this.guna2CirclePictureBox2);
+            this.guna2GroupBox2.Controls.Add(this.button_InOut);
+            this.guna2GroupBox2.Controls.Add(this.textBox_Key);
+            this.guna2GroupBox2.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2GroupBox2.Controls.Add(this.guna2CirclePictureBox4);
+            this.guna2GroupBox2.Controls.Add(this.textBox_LicensePlate);
+            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2GroupBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.guna2GroupBox2.Location = new System.Drawing.Point(133, 113);
+            this.guna2GroupBox2.Name = "guna2GroupBox2";
+            this.guna2GroupBox2.Size = new System.Drawing.Size(566, 494);
+            this.guna2GroupBox2.TabIndex = 65;
             // 
-            // button_addVehicle
+            // comboBox_TypeVehicle
             // 
-            this.button_addVehicle.BorderRadius = 20;
-            this.button_addVehicle.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_addVehicle.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_addVehicle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_addVehicle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_addVehicle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_addVehicle.ForeColor = System.Drawing.Color.White;
-            this.button_addVehicle.Location = new System.Drawing.Point(23, 522);
-            this.button_addVehicle.Name = "button_addVehicle";
-            this.button_addVehicle.Size = new System.Drawing.Size(312, 47);
-            this.button_addVehicle.TabIndex = 7;
-            this.button_addVehicle.Text = "Add Vehicle";
-            this.button_addVehicle.Click += new System.EventHandler(this.button_addVehicle_Click);
+            this.comboBox_TypeVehicle.BackColor = System.Drawing.Color.Transparent;
+            this.comboBox_TypeVehicle.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox_TypeVehicle.BorderRadius = 20;
+            this.comboBox_TypeVehicle.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_TypeVehicle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_TypeVehicle.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox_TypeVehicle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox_TypeVehicle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.comboBox_TypeVehicle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBox_TypeVehicle.ItemHeight = 30;
+            this.comboBox_TypeVehicle.Items.AddRange(new object[] {
+            "Motor",
+            "Car",
+            "Truck"});
+            this.comboBox_TypeVehicle.Location = new System.Drawing.Point(92, 43);
+            this.comboBox_TypeVehicle.MaxDropDownItems = 2;
+            this.comboBox_TypeVehicle.Name = "comboBox_TypeVehicle";
+            this.comboBox_TypeVehicle.Size = new System.Drawing.Size(138, 36);
+            this.comboBox_TypeVehicle.TabIndex = 61;
             // 
-            // dataGridView_listVehicle
+            // button_UploadPlate
             // 
-            this.dataGridView_listVehicle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_listVehicle.Location = new System.Drawing.Point(23, 33);
-            this.dataGridView_listVehicle.Name = "dataGridView_listVehicle";
-            this.dataGridView_listVehicle.RowHeadersWidth = 51;
-            this.dataGridView_listVehicle.RowTemplate.Height = 24;
-            this.dataGridView_listVehicle.Size = new System.Drawing.Size(749, 408);
-            this.dataGridView_listVehicle.TabIndex = 6;
+            this.button_UploadPlate.Location = new System.Drawing.Point(249, 213);
+            this.button_UploadPlate.Name = "button_UploadPlate";
+            this.button_UploadPlate.Size = new System.Drawing.Size(273, 30);
+            this.button_UploadPlate.TabIndex = 60;
+            this.button_UploadPlate.Text = "Upload image";
+            this.button_UploadPlate.UseVisualStyleBackColor = true;
+            this.button_UploadPlate.Click += new System.EventHandler(this.button_UploadPlate_Click_1);
+            // 
+            // pictureBox_ImagePlate
+            // 
+            this.pictureBox_ImagePlate.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox_ImagePlate.Location = new System.Drawing.Point(249, 43);
+            this.pictureBox_ImagePlate.Name = "pictureBox_ImagePlate";
+            this.pictureBox_ImagePlate.Size = new System.Drawing.Size(273, 174);
+            this.pictureBox_ImagePlate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_ImagePlate.TabIndex = 59;
+            this.pictureBox_ImagePlate.TabStop = false;
+            // 
+            // guna2CirclePictureBox2
+            // 
+            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox2.Image")));
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(28, 43);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox2.TabIndex = 58;
+            this.guna2CirclePictureBox2.TabStop = false;
+            // 
+            // button_InOut
+            // 
+            this.button_InOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.button_InOut.BorderRadius = 20;
+            this.button_InOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_InOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_InOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_InOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_InOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button_InOut.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_InOut.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_InOut.Location = new System.Drawing.Point(196, 417);
+            this.button_InOut.Name = "button_InOut";
+            this.button_InOut.Size = new System.Drawing.Size(158, 56);
+            this.button_InOut.TabIndex = 57;
+            this.button_InOut.Click += new System.EventHandler(this.button_InOut_Click);
+            // 
+            // textBox_Key
+            // 
+            this.textBox_Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_Key.BorderRadius = 20;
+            this.textBox_Key.BorderThickness = 0;
+            this.textBox_Key.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_Key.DefaultText = "";
+            this.textBox_Key.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox_Key.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox_Key.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_Key.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_Key.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_Key.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.textBox_Key.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBox_Key.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_Key.Location = new System.Drawing.Point(92, 343);
+            this.textBox_Key.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox_Key.Name = "textBox_Key";
+            this.textBox_Key.PasswordChar = '\0';
+            this.textBox_Key.PlaceholderText = "Key";
+            this.textBox_Key.ReadOnly = true;
+            this.textBox_Key.SelectedText = "";
+            this.textBox_Key.Size = new System.Drawing.Size(430, 48);
+            this.textBox_Key.TabIndex = 43;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(28, 343);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 41;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // guna2CirclePictureBox4
+            // 
+            this.guna2CirclePictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CirclePictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox4.Image")));
+            this.guna2CirclePictureBox4.ImageRotate = 0F;
+            this.guna2CirclePictureBox4.Location = new System.Drawing.Point(28, 275);
+            this.guna2CirclePictureBox4.Name = "guna2CirclePictureBox4";
+            this.guna2CirclePictureBox4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox4.Size = new System.Drawing.Size(46, 48);
+            this.guna2CirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox4.TabIndex = 33;
+            this.guna2CirclePictureBox4.TabStop = false;
+            // 
+            // textBox_LicensePlate
+            // 
+            this.textBox_LicensePlate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_LicensePlate.BorderRadius = 20;
+            this.textBox_LicensePlate.BorderThickness = 0;
+            this.textBox_LicensePlate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_LicensePlate.DefaultText = "";
+            this.textBox_LicensePlate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox_LicensePlate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox_LicensePlate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_LicensePlate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_LicensePlate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_LicensePlate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.textBox_LicensePlate.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBox_LicensePlate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_LicensePlate.Location = new System.Drawing.Point(92, 275);
+            this.textBox_LicensePlate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox_LicensePlate.Name = "textBox_LicensePlate";
+            this.textBox_LicensePlate.PasswordChar = '\0';
+            this.textBox_LicensePlate.PlaceholderText = "License plate";
+            this.textBox_LicensePlate.ReadOnly = true;
+            this.textBox_LicensePlate.SelectedText = "";
+            this.textBox_LicensePlate.Size = new System.Drawing.Size(430, 48);
+            this.textBox_LicensePlate.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label9.Location = new System.Drawing.Point(168, 39);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(486, 57);
+            this.label9.TabIndex = 64;
+            this.label9.Text = "Vehicle management in";
+            // 
+            // Genderpanel
+            // 
+            this.Genderpanel.Controls.Add(this.radioButton_Out);
+            this.Genderpanel.Controls.Add(this.radioButton_In);
+            this.Genderpanel.Location = new System.Drawing.Point(297, 631);
+            this.Genderpanel.Name = "Genderpanel";
+            this.Genderpanel.Size = new System.Drawing.Size(242, 56);
+            this.Genderpanel.TabIndex = 66;
+            // 
+            // radioButton_Out
+            // 
+            this.radioButton_Out.AutoSize = true;
+            this.radioButton_Out.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButton_Out.Location = new System.Drawing.Point(144, 18);
+            this.radioButton_Out.Name = "radioButton_Out";
+            this.radioButton_Out.Size = new System.Drawing.Size(61, 27);
+            this.radioButton_Out.TabIndex = 1;
+            this.radioButton_Out.TabStop = true;
+            this.radioButton_Out.Text = "Out";
+            this.radioButton_Out.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_In
+            // 
+            this.radioButton_In.AutoSize = true;
+            this.radioButton_In.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.radioButton_In.Location = new System.Drawing.Point(13, 18);
+            this.radioButton_In.Name = "radioButton_In";
+            this.radioButton_In.Size = new System.Drawing.Size(46, 27);
+            this.radioButton_In.TabIndex = 0;
+            this.radioButton_In.TabStop = true;
+            this.radioButton_In.Text = "In";
+            this.radioButton_In.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label10.Location = new System.Drawing.Point(187, 631);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(104, 35);
+            this.label10.TabIndex = 67;
+            this.label10.Text = "Option:";
+            // 
+            // button_select
+            // 
+            this.button_select.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.button_select.BorderRadius = 20;
+            this.button_select.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_select.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_select.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_select.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_select.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button_select.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_select.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_select.Location = new System.Drawing.Point(545, 631);
+            this.button_select.Name = "button_select";
+            this.button_select.Size = new System.Drawing.Size(78, 56);
+            this.button_select.TabIndex = 62;
+            this.button_select.Text = "Select";
+            this.button_select.Click += new System.EventHandler(this.button_select_Click);
             // 
             // KeepWorkerMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(1053, 634);
+            this.ClientSize = new System.Drawing.Size(1053, 748);
             this.Controls.Add(this.guna2TabControl1);
             this.Name = "KeepWorkerMainForm";
             this.Text = "KeepWorkerMainForm";
@@ -404,7 +628,14 @@
             this.guna2GroupBox1.PerformLayout();
             this.guna2TabControl1.ResumeLayout(false);
             this.tabPage_vehicle.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listVehicle)).EndInit();
+            this.tabPage_vehicle.PerformLayout();
+            this.guna2GroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ImagePlate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
+            this.Genderpanel.ResumeLayout(false);
+            this.Genderpanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -433,8 +664,21 @@
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2TabControl guna2TabControl1;
         private System.Windows.Forms.TabPage tabPage_vehicle;
-        private Guna.UI2.WinForms.Guna2Button button_resetVehicle;
-        private Guna.UI2.WinForms.Guna2Button button_addVehicle;
-        private System.Windows.Forms.DataGridView dataGridView_listVehicle;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBox_TypeVehicle;
+        private System.Windows.Forms.Button button_UploadPlate;
+        private System.Windows.Forms.PictureBox pictureBox_ImagePlate;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
+        private Guna.UI2.WinForms.Guna2Button button_InOut;
+        private Guna.UI2.WinForms.Guna2TextBox textBox_Key;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox4;
+        private Guna.UI2.WinForms.Guna2TextBox textBox_LicensePlate;
+        public System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel Genderpanel;
+        private System.Windows.Forms.RadioButton radioButton_Out;
+        private System.Windows.Forms.RadioButton radioButton_In;
+        public System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2Button button_select;
     }
 }

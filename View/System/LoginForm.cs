@@ -15,9 +15,7 @@ namespace FinalWindow
 {
     public partial class LoginForm : Form
     {
-        private static int userID;
-
-        public static int UserID { get => userID; set => userID = value; }
+        
 
         public LoginForm()
         {
@@ -84,7 +82,7 @@ namespace FinalWindow
                     Director director = databaseContext.Users.OfType<Director>().Where(f => f.username == username).FirstOrDefault();
                     // Login successful, show the main form
                     DirectorMainForm mainFormm = new DirectorMainForm();
-                    UserID = director.ID;
+                    DirectorMainForm.DirID = director.ID;
 
                     mainFormm.Show();
 
@@ -99,7 +97,7 @@ namespace FinalWindow
                     Manager manager = databaseContext.Users.OfType<Manager>().Where(f => f.username == username).FirstOrDefault();
                     // Login successful, show the main form
                     ManagerMainForm mainFormm = new ManagerMainForm();
-                    UserID = manager.ID;
+                    ManagerMainForm.ManID = manager.ID;
                     mainFormm.Show();
 
                 }
@@ -112,7 +110,7 @@ namespace FinalWindow
                     Customer customer = databaseContext.Users.OfType<Customer>().Where(f => f.username == username).FirstOrDefault();
                     // Login successful, show the main form
                     CustomerMainForm customerMainFormm = new CustomerMainForm();
-                    UserID = customer.ID;
+                    CustomerMainForm.CusID = customer.ID;
                     customerMainFormm.Show();
 
                 }
@@ -125,7 +123,7 @@ namespace FinalWindow
                     FixWorker fixer = databaseContext.Users.OfType<FixWorker>().Where(f => f.username == username).FirstOrDefault();
                     // Login successful, show the main form
                     FixWorkerMainForm mainFormm = new FixWorkerMainForm();
-                    UserID = fixer.ID;
+                    FixWorkerMainForm.FixID = fixer.ID;
                     mainFormm.Show();
 
                 }
@@ -138,7 +136,7 @@ namespace FinalWindow
                     KeepWorker keeper = databaseContext.Users.OfType<KeepWorker>().Where(f => f.username == username).FirstOrDefault();
                     // Login successful, show the main form
                     KeepWorkerMainForm mainFormm = new KeepWorkerMainForm();
-                    UserID = keeper.ID;
+                    KeepWorkerMainForm.KeepID = keeper.ID;
                     mainFormm.Show();
                 }
             }

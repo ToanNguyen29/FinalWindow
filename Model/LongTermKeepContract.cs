@@ -10,12 +10,13 @@ namespace FinalWindow.Model
 {
     internal class LongTermKeepContract : Contract
     {
-        public string option { get; set; }
+        public bool is_Loan { get; set; }
 
-        public string type { get; set; }
-        
         public float period { get; set; }
 
+        public string typeContract { get; set; }
+
         
+
     }
 }

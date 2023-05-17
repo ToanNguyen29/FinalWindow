@@ -4,13 +4,16 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace FinalWindow.Database
 {
     internal class DatabaseContext : DbContext
     {
-        public DatabaseContext() : base("Data Source=LAPTOP-C9DUVST2\\SANG;Initial Catalog=CarParking;Integrated Security=True")
+
+        /*private static readonly Lazy<DatabaseContext> instance = new Lazy<DatabaseContext>(() => new DatabaseContext(), LazyThreadSafetyMode.ExecutionAndPublication);*/
+        public DatabaseContext() : base("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=FinalProject;Integrated Security=True")
         {
 
         }
@@ -22,6 +25,14 @@ namespace FinalWindow.Database
         public DbSet<User> Users { get; set; }
         public DbSet<Contract> Contracts { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<Shift> Shifts { get; set; }
+        public DbSet<FeeKeep> FeeKeeps { get; set; }
+
+        /*public static DatabaseContext GetInstance()
+        {
+            // Return the single instance of the class
+            return instance.Value;
+        }*/
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

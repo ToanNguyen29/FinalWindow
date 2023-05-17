@@ -13,7 +13,6 @@ namespace FinalWindow.Model
         [Key]
         public int ID { get; set; }
 
-        [MaxLength(50)]
         public string address { get; set; }
 
         public int? quatityFix { get; set; }
@@ -23,6 +22,8 @@ namespace FinalWindow.Model
         public virtual ICollection<FixWorker> FixWorkers { get; set; }
         public virtual ICollection<KeepWorker> KeepWorkers { get; set; }
         public virtual ICollection<Manager> Managers { get; set; }
+        public virtual ICollection<Contract> Contracts { get; set; }
+        
 
     }
 }

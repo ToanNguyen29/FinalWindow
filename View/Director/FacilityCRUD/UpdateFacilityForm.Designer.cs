@@ -38,6 +38,8 @@
             this.textBox_facilityAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.button_selectFacility = new Guna.UI2.WinForms.Guna2Button();
             this.button_updateFacility = new Guna.UI2.WinForms.Guna2Button();
+            this.button_Manager = new Guna.UI2.WinForms.Guna2Button();
+            this.button_refreshFacility = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
@@ -48,11 +50,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 25.2F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(232, 9);
+            this.label1.Location = new System.Drawing.Point(262, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 57);
+            this.label1.Size = new System.Drawing.Size(326, 59);
             this.label1.TabIndex = 57;
             this.label1.Text = "Update Facility";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2CirclePictureBox5
             // 
@@ -80,7 +83,7 @@
             this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(121, 122);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(238, 127);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.Size = new System.Drawing.Size(559, 247);
             this.guna2GroupBox1.TabIndex = 56;
@@ -104,7 +107,8 @@
             this.textBox_quantityKeep.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_quantityKeep.Name = "textBox_quantityKeep";
             this.textBox_quantityKeep.PasswordChar = '\0';
-            this.textBox_quantityKeep.PlaceholderText = "Type quantity keep";
+            this.textBox_quantityKeep.PlaceholderText = "Quantity keep worker";
+            this.textBox_quantityKeep.ReadOnly = true;
             this.textBox_quantityKeep.SelectedText = "";
             this.textBox_quantityKeep.Size = new System.Drawing.Size(191, 48);
             this.textBox_quantityKeep.TabIndex = 40;
@@ -141,7 +145,8 @@
             this.textBox_quantityFix.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox_quantityFix.Name = "textBox_quantityFix";
             this.textBox_quantityFix.PasswordChar = '\0';
-            this.textBox_quantityFix.PlaceholderText = "Type quantity fix";
+            this.textBox_quantityFix.PlaceholderText = "Quantity fix worker";
+            this.textBox_quantityFix.ReadOnly = true;
             this.textBox_quantityFix.SelectedText = "";
             this.textBox_quantityFix.Size = new System.Drawing.Size(191, 48);
             this.textBox_quantityFix.TabIndex = 39;
@@ -179,9 +184,9 @@
             this.button_selectFacility.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_selectFacility.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_selectFacility.ForeColor = System.Drawing.Color.White;
-            this.button_selectFacility.Location = new System.Drawing.Point(121, 393);
+            this.button_selectFacility.Location = new System.Drawing.Point(52, 127);
             this.button_selectFacility.Name = "button_selectFacility";
-            this.button_selectFacility.Size = new System.Drawing.Size(248, 45);
+            this.button_selectFacility.Size = new System.Drawing.Size(169, 45);
             this.button_selectFacility.TabIndex = 61;
             this.button_selectFacility.Text = "Select";
             this.button_selectFacility.Click += new System.EventHandler(this.button_selectFacility_Click);
@@ -195,25 +200,59 @@
             this.button_updateFacility.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_updateFacility.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_updateFacility.ForeColor = System.Drawing.Color.White;
-            this.button_updateFacility.Location = new System.Drawing.Point(432, 393);
+            this.button_updateFacility.Location = new System.Drawing.Point(199, 407);
             this.button_updateFacility.Name = "button_updateFacility";
-            this.button_updateFacility.Size = new System.Drawing.Size(248, 45);
+            this.button_updateFacility.Size = new System.Drawing.Size(230, 76);
             this.button_updateFacility.TabIndex = 60;
             this.button_updateFacility.Text = "Update";
             this.button_updateFacility.Click += new System.EventHandler(this.button_updateFacility_Click);
+            // 
+            // button_Manager
+            // 
+            this.button_Manager.BorderRadius = 20;
+            this.button_Manager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_Manager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_Manager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_Manager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_Manager.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Manager.ForeColor = System.Drawing.Color.White;
+            this.button_Manager.Location = new System.Drawing.Point(52, 188);
+            this.button_Manager.Name = "button_Manager";
+            this.button_Manager.Size = new System.Drawing.Size(169, 45);
+            this.button_Manager.TabIndex = 63;
+            this.button_Manager.Text = "Manager";
+            this.button_Manager.Click += new System.EventHandler(this.button_Manager_Click);
+            // 
+            // button_refreshFacility
+            // 
+            this.button_refreshFacility.BorderRadius = 20;
+            this.button_refreshFacility.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_refreshFacility.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_refreshFacility.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_refreshFacility.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_refreshFacility.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_refreshFacility.ForeColor = System.Drawing.Color.White;
+            this.button_refreshFacility.Location = new System.Drawing.Point(466, 407);
+            this.button_refreshFacility.Name = "button_refreshFacility";
+            this.button_refreshFacility.Size = new System.Drawing.Size(230, 76);
+            this.button_refreshFacility.TabIndex = 64;
+            this.button_refreshFacility.Text = "Refresh";
             // 
             // UpdateFacilityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(892, 520);
+            this.Controls.Add(this.button_refreshFacility);
+            this.Controls.Add(this.button_Manager);
             this.Controls.Add(this.button_selectFacility);
             this.Controls.Add(this.button_updateFacility);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "UpdateFacilityForm";
             this.Text = "UpdateFacilityForm";
+            this.Load += new System.EventHandler(this.UpdateFacilityForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
@@ -233,5 +272,7 @@
         public Guna.UI2.WinForms.Guna2TextBox textBox_quantityKeep;
         public Guna.UI2.WinForms.Guna2TextBox textBox_quantityFix;
         public Guna.UI2.WinForms.Guna2TextBox textBox_facilityAddress;
+        private Guna.UI2.WinForms.Guna2Button button_Manager;
+        private Guna.UI2.WinForms.Guna2Button button_refreshFacility;
     }
 }

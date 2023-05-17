@@ -21,7 +21,9 @@ namespace FinalWindow
             InitializeComponent();
         }
 
-        
+        private static int manID;
+
+        public static int ManID { get => manID; set => manID = value; }
 
         private void button_resetFix_Click(object sender, EventArgs e)
         {
@@ -115,7 +117,7 @@ namespace FinalWindow
             try
             {
                 DatabaseContext context = new DatabaseContext();
-                var manager = context.Users.OfType<Manager>().Where(t => t.ID == LoginForm.UserID).FirstOrDefault();
+                var manager = context.Users.OfType<Manager>().Where(t => t.ID == manID).FirstOrDefault();
                 if (manager.picture != null)
                 {
                     byte[] imageData = (byte[])manager.picture;

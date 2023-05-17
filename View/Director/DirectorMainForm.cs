@@ -2,6 +2,7 @@
 using FinalWindow.Model;
 using FinalWindow.View.Director;
 using FinalWindow.View.Director.FacilityCRUD;
+using FinalWindow.View.Director.List;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,9 @@ namespace FinalWindow
             InitializeComponent();
         }
 
-        
+        private static int dirID;
+
+        public static int DirID { get => DirID; set => DirID = value; }
 
         private void loadData()
         {
@@ -86,51 +89,34 @@ namespace FinalWindow
 
         private void DirectorMainForm_Load(object sender, EventArgs e)
         {
-            // Get a reference to the initially selected tab page
-            TabPage selectedTabPage = tabPage_managerManagement;
+            DatabaseContext db = new DatabaseContext();
+           
+            comboBox_facilityLong.DataSource = db.Facilities.ToList();
+            comboBox_facilityLong.DisplayMember = "address";
+            comboBox_facilityLong.ValueMember = "ID";
+            comboBox_facilityLong.SelectedItem = null;
+            
+            comboBox_facilityLong.DataSource = db.Facilities.ToList();
+            comboBox_facilityLong.DisplayMember = "address";
+            comboBox_facilityLong.ValueMember = "ID";
 
-            // Check if the initially selected tab page contains a DataGridView
-            foreach (System.Windows.Forms.Control control in selectedTabPage.Controls)
-            {
-                if (control is DataGridView dataGridView)
+            comboBox_facilityLong.SelectedItem = null;
+
+            var managerData = db.Users
+                .Where(u => u is Manager)
+                .Select(u => new
                 {
-                    // Load the data source for the DataGridView
+                    FisrtName = u.firstName,
+                    LastName = u.lastName,
+                    Gender = u.gender,
+                    Phone = u.phone,
+                    Birthday = u.birthday
 
-                    using (var context = new DatabaseContext())
-                    {
-                        var managerData = context.Users
-                            .Where(u => u is Manager)
-                            .Select(u => new
-                            {
-                                FisrtName = u.firstName,
-                                LastName = u.lastName,
-                                Gender = u.gender,
-                                Phone = u.phone,
-                                Birthday = u.birthday
+                })
+                .ToList();
+            dataGridView_listManager.DataSource = managerData;
 
-                            })
-                            .ToList();
-
-
-
-                        dataGridView_listManager.DataSource = managerData;
-                        break;
-                    }
-                }
-            }
-
-
-            if(selectedTabPage == tabPage_facilityManagement)
-            {
-                foreach (System.Windows.Forms.Control control in selectedTabPage.Controls)
-                {
-                    if (control is DataGridView dataGridView)
-                    {
-                        // Load the data source for the DataGridView
-
-                        using (var context = new DatabaseContext())
-                        {
-                            var facilityData = context.Facilities
+            var facilityData = db.Facilities
                                 .Select(f => new
                                 {
                                     Address = f.address,
@@ -140,14 +126,14 @@ namespace FinalWindow
                                 })
                                 .ToList();
 
+            dataGridView_listFacility.DataSource = facilityData;
 
 
-                            dataGridView_listFacility.DataSource = facilityData;
-                        }
-                    }
-                }
-            }
+
         }
+            
+                
+        
 
         private void button_resetFacility_Click(object sender, EventArgs e)
         {
@@ -201,6 +187,71 @@ namespace FinalWindow
         {
             UpdateFacilityForm updateFacilityForm = new UpdateFacilityForm();
             updateFacilityForm.Show();
+        }
+
+        private void dataGridView_listFacility_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_updateFixWorker_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_resetFix_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_addFixWorker_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_resetKeep_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_addKeepWorker_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_ShowLong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LongTermContract_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void LoanContract_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button_setRuleLong_Click(object sender, EventArgs e)
+        {
+            DatabaseContext context = new DatabaseContext();
+            var rule = context.Rules.Where(t => t.nameContract == "LongTermContract").FirstOrDefault();
+            rule.description = textBox_ruleLong.Text;
+        }
+
+        private void button_setRuleLoan_Click(object sender, EventArgs e)
+        {
+            DatabaseContext context = new DatabaseContext();
+            var rule = context.Rules.Where(t => t.nameContract == "LoanContract").FirstOrDefault();
+            rule.description = textBox_ruleLoan.Text;
+        }
+
+        private void button_showListLoan_Click(object sender, EventArgs e)
+        {
+            ListLoanContract list = new ListLoanContract();
+            list.Show();
         }
     }
 }
