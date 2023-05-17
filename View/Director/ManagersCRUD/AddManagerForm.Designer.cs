@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddManagerForm));
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.comboBox_facilityID = new Guna.UI2.WinForms.Guna2ComboBox();
             this.birthday_picker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2CirclePictureBox6 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.textBox_cardID = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,7 +50,6 @@
             this.pictureBox_image = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.textBox_username = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox_password = new Guna.UI2.WinForms.Guna2TextBox();
-            this.comboBox_facilityID = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
@@ -88,13 +88,29 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(559, 448);
             this.guna2GroupBox1.TabIndex = 28;
             // 
+            // comboBox_facilityID
+            // 
+            this.comboBox_facilityID.BackColor = System.Drawing.Color.Transparent;
+            this.comboBox_facilityID.BorderRadius = 20;
+            this.comboBox_facilityID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_facilityID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_facilityID.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox_facilityID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox_facilityID.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_facilityID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBox_facilityID.ItemHeight = 30;
+            this.comboBox_facilityID.Location = new System.Drawing.Point(320, 23);
+            this.comboBox_facilityID.Name = "comboBox_facilityID";
+            this.comboBox_facilityID.Size = new System.Drawing.Size(201, 36);
+            this.comboBox_facilityID.TabIndex = 41;
+            // 
             // birthday_picker
             // 
             this.birthday_picker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.birthday_picker.BorderRadius = 20;
             this.birthday_picker.Checked = true;
             this.birthday_picker.CustomFormat = "MM/dd/yyyy";
-            this.birthday_picker.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.birthday_picker.FillColor = System.Drawing.Color.White;
             this.birthday_picker.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthday_picker.ForeColor = System.Drawing.SystemColors.ControlText;
             this.birthday_picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -436,22 +452,6 @@
             this.textBox_password.SelectedText = "";
             this.textBox_password.Size = new System.Drawing.Size(210, 43);
             this.textBox_password.TabIndex = 2;
-            // 
-            // comboBox_facilityID
-            // 
-            this.comboBox_facilityID.BackColor = System.Drawing.Color.Transparent;
-            this.comboBox_facilityID.BorderRadius = 20;
-            this.comboBox_facilityID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox_facilityID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_facilityID.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBox_facilityID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBox_facilityID.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_facilityID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBox_facilityID.ItemHeight = 30;
-            this.comboBox_facilityID.Location = new System.Drawing.Point(320, 23);
-            this.comboBox_facilityID.Name = "comboBox_facilityID";
-            this.comboBox_facilityID.Size = new System.Drawing.Size(201, 36);
-            this.comboBox_facilityID.TabIndex = 41;
             // 
             // AddManagerForm
             // 

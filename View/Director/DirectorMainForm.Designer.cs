@@ -35,7 +35,7 @@
             this.label_gender = new System.Windows.Forms.Label();
             this.label_lastName = new System.Windows.Forms.Label();
             this.label_firstName = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label_username = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,24 +44,30 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pictureBox_directorImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.button_editInformation = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage_profile = new System.Windows.Forms.TabPage();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tabControl_director = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage_managerManagement = new System.Windows.Forms.TabPage();
+            this.button_removeManager = new Guna.UI2.WinForms.Guna2Button();
+            this.button_updateManager = new Guna.UI2.WinForms.Guna2Button();
             this.button_resetData = new Guna.UI2.WinForms.Guna2Button();
             this.button_addManager = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView_listManager = new System.Windows.Forms.DataGridView();
             this.tabPage_facilityManagement = new System.Windows.Forms.TabPage();
+            this.button_removeFacility = new Guna.UI2.WinForms.Guna2Button();
+            this.button_updateFacility = new Guna.UI2.WinForms.Guna2Button();
             this.button_resetFacility = new Guna.UI2.WinForms.Guna2Button();
             this.button_addFacility = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView_listFacility = new System.Windows.Forms.DataGridView();
-            this.button_updateManager = new Guna.UI2.WinForms.Guna2Button();
-            this.button_removeManager = new Guna.UI2.WinForms.Guna2Button();
-            this.button_updateFacility = new Guna.UI2.WinForms.Guna2Button();
-            this.button_removeFacility = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.tabPage_shift = new System.Windows.Forms.TabPage();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.button_resetListShift = new Guna.UI2.WinForms.Guna2Button();
+            this.button_addShift = new Guna.UI2.WinForms.Guna2Button();
+            this.dataGridView_listShift = new System.Windows.Forms.DataGridView();
+            this.button_reset = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_directorImage)).BeginInit();
             this.tabPage_profile.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.tabControl_director.SuspendLayout();
@@ -69,6 +75,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listManager)).BeginInit();
             this.tabPage_facilityManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listFacility)).BeginInit();
+            this.tabPage_shift.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listShift)).BeginInit();
             this.SuspendLayout();
             // 
             // label_birthDate
@@ -148,16 +156,16 @@
             this.label_firstName.TabIndex = 26;
             this.label_firstName.Text = "First Name";
             // 
-            // label9
+            // label_username
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(32, 40);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 23);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Username";
+            this.label_username.AutoSize = true;
+            this.label_username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.label_username.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_username.Location = new System.Drawing.Point(32, 40);
+            this.label_username.Name = "label_username";
+            this.label_username.Size = new System.Drawing.Size(89, 23);
+            this.label_username.TabIndex = 25;
+            this.label_username.Text = "Username";
             // 
             // label8
             // 
@@ -244,16 +252,17 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "First Name:";
             // 
-            // guna2CirclePictureBox1
+            // pictureBox_directorImage
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(26, 85);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(108, 99);
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.pictureBox_directorImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.pictureBox_directorImage.ImageRotate = 0F;
+            this.pictureBox_directorImage.Location = new System.Drawing.Point(26, 85);
+            this.pictureBox_directorImage.Name = "pictureBox_directorImage";
+            this.pictureBox_directorImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureBox_directorImage.Size = new System.Drawing.Size(108, 99);
+            this.pictureBox_directorImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_directorImage.TabIndex = 0;
+            this.pictureBox_directorImage.TabStop = false;
             // 
             // button_editInformation
             // 
@@ -269,10 +278,12 @@
             this.button_editInformation.Size = new System.Drawing.Size(710, 84);
             this.button_editInformation.TabIndex = 1;
             this.button_editInformation.Text = "Edit your information";
+            this.button_editInformation.Click += new System.EventHandler(this.button_editInformation_Click);
             // 
             // tabPage_profile
             // 
             this.tabPage_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
+            this.tabPage_profile.Controls.Add(this.button_reset);
             this.tabPage_profile.Controls.Add(this.button_editInformation);
             this.tabPage_profile.Controls.Add(this.guna2GroupBox1);
             this.tabPage_profile.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -294,7 +305,7 @@
             this.guna2GroupBox1.Controls.Add(this.label_gender);
             this.guna2GroupBox1.Controls.Add(this.label_lastName);
             this.guna2GroupBox1.Controls.Add(this.label_firstName);
-            this.guna2GroupBox1.Controls.Add(this.label9);
+            this.guna2GroupBox1.Controls.Add(this.label_username);
             this.guna2GroupBox1.Controls.Add(this.label8);
             this.guna2GroupBox1.Controls.Add(this.label7);
             this.guna2GroupBox1.Controls.Add(this.label6);
@@ -303,7 +314,7 @@
             this.guna2GroupBox1.Controls.Add(this.label3);
             this.guna2GroupBox1.Controls.Add(this.label2);
             this.guna2GroupBox1.Controls.Add(this.label1);
-            this.guna2GroupBox1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2GroupBox1.Controls.Add(this.pictureBox_directorImage);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -319,6 +330,7 @@
             this.tabControl_director.Controls.Add(this.tabPage_profile);
             this.tabControl_director.Controls.Add(this.tabPage_managerManagement);
             this.tabControl_director.Controls.Add(this.tabPage_facilityManagement);
+            this.tabControl_director.Controls.Add(this.tabPage_shift);
             this.tabControl_director.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl_director.ItemSize = new System.Drawing.Size(180, 40);
             this.tabControl_director.Location = new System.Drawing.Point(12, 12);
@@ -358,6 +370,37 @@
             this.tabPage_managerManagement.Size = new System.Drawing.Size(845, 603);
             this.tabPage_managerManagement.TabIndex = 1;
             this.tabPage_managerManagement.Text = "Managers";
+            // 
+            // button_removeManager
+            // 
+            this.button_removeManager.BorderRadius = 20;
+            this.button_removeManager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_removeManager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_removeManager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_removeManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_removeManager.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_removeManager.ForeColor = System.Drawing.Color.White;
+            this.button_removeManager.Location = new System.Drawing.Point(283, 503);
+            this.button_removeManager.Name = "button_removeManager";
+            this.button_removeManager.Size = new System.Drawing.Size(222, 47);
+            this.button_removeManager.TabIndex = 3;
+            this.button_removeManager.Text = "Remove Manager";
+            // 
+            // button_updateManager
+            // 
+            this.button_updateManager.BorderRadius = 20;
+            this.button_updateManager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_updateManager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_updateManager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_updateManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_updateManager.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_updateManager.ForeColor = System.Drawing.Color.White;
+            this.button_updateManager.Location = new System.Drawing.Point(545, 503);
+            this.button_updateManager.Name = "button_updateManager";
+            this.button_updateManager.Size = new System.Drawing.Size(222, 47);
+            this.button_updateManager.TabIndex = 4;
+            this.button_updateManager.Text = "Update Manager";
+            this.button_updateManager.Click += new System.EventHandler(this.button_editManager_Click);
             // 
             // button_resetData
             // 
@@ -416,6 +459,37 @@
             this.tabPage_facilityManagement.TabIndex = 2;
             this.tabPage_facilityManagement.Text = "Facilities";
             // 
+            // button_removeFacility
+            // 
+            this.button_removeFacility.BorderRadius = 20;
+            this.button_removeFacility.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_removeFacility.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_removeFacility.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_removeFacility.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_removeFacility.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_removeFacility.ForeColor = System.Drawing.Color.White;
+            this.button_removeFacility.Location = new System.Drawing.Point(550, 509);
+            this.button_removeFacility.Name = "button_removeFacility";
+            this.button_removeFacility.Size = new System.Drawing.Size(222, 47);
+            this.button_removeFacility.TabIndex = 7;
+            this.button_removeFacility.Text = "Remove Facility";
+            // 
+            // button_updateFacility
+            // 
+            this.button_updateFacility.BorderRadius = 20;
+            this.button_updateFacility.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_updateFacility.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_updateFacility.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_updateFacility.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_updateFacility.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_updateFacility.ForeColor = System.Drawing.Color.White;
+            this.button_updateFacility.Location = new System.Drawing.Point(286, 509);
+            this.button_updateFacility.Name = "button_updateFacility";
+            this.button_updateFacility.Size = new System.Drawing.Size(222, 47);
+            this.button_updateFacility.TabIndex = 6;
+            this.button_updateFacility.Text = "Update Facility";
+            this.button_updateFacility.Click += new System.EventHandler(this.button_updateFacility_Click);
+            // 
             // button_resetFacility
             // 
             this.button_resetFacility.BorderRadius = 20;
@@ -459,67 +533,93 @@
             this.dataGridView_listFacility.TabIndex = 1;
             this.dataGridView_listFacility.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_listFacility_CellContentClick);
             // 
-            // button_updateManager
+            // tabPage_shift
             // 
-            this.button_updateManager.BorderRadius = 20;
-            this.button_updateManager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_updateManager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_updateManager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_updateManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_updateManager.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_updateManager.ForeColor = System.Drawing.Color.White;
-            this.button_updateManager.Location = new System.Drawing.Point(545, 503);
-            this.button_updateManager.Name = "button_updateManager";
-            this.button_updateManager.Size = new System.Drawing.Size(222, 47);
-            this.button_updateManager.TabIndex = 4;
-            this.button_updateManager.Text = "Update Manager";
-            this.button_updateManager.Click += new System.EventHandler(this.button_editManager_Click);
+            this.tabPage_shift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
+            this.tabPage_shift.Controls.Add(this.guna2Button1);
+            this.tabPage_shift.Controls.Add(this.button_resetListShift);
+            this.tabPage_shift.Controls.Add(this.button_addShift);
+            this.tabPage_shift.Controls.Add(this.dataGridView_listShift);
+            this.tabPage_shift.Location = new System.Drawing.Point(184, 4);
+            this.tabPage_shift.Name = "tabPage_shift";
+            this.tabPage_shift.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_shift.Size = new System.Drawing.Size(845, 603);
+            this.tabPage_shift.TabIndex = 3;
+            this.tabPage_shift.Text = "Shift";
             // 
-            // button_removeManager
+            // guna2Button1
             // 
-            this.button_removeManager.BorderRadius = 20;
-            this.button_removeManager.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_removeManager.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_removeManager.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_removeManager.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_removeManager.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_removeManager.ForeColor = System.Drawing.Color.White;
-            this.button_removeManager.Location = new System.Drawing.Point(283, 503);
-            this.button_removeManager.Name = "button_removeManager";
-            this.button_removeManager.Size = new System.Drawing.Size(222, 47);
-            this.button_removeManager.TabIndex = 3;
-            this.button_removeManager.Text = "Remove Manager";
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(335, 380);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(222, 47);
+            this.guna2Button1.TabIndex = 11;
+            this.guna2Button1.Text = "Remove Shift";
             // 
-            // button_updateFacility
+            // button_resetListShift
             // 
-            this.button_updateFacility.BorderRadius = 20;
-            this.button_updateFacility.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_updateFacility.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_updateFacility.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_updateFacility.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_updateFacility.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_updateFacility.ForeColor = System.Drawing.Color.White;
-            this.button_updateFacility.Location = new System.Drawing.Point(286, 509);
-            this.button_updateFacility.Name = "button_updateFacility";
-            this.button_updateFacility.Size = new System.Drawing.Size(222, 47);
-            this.button_updateFacility.TabIndex = 6;
-            this.button_updateFacility.Text = "Update Facility";
-            this.button_updateFacility.Click += new System.EventHandler(this.button_updateFacility_Click);
+            this.button_resetListShift.BorderRadius = 10;
+            this.button_resetListShift.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_resetListShift.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_resetListShift.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_resetListShift.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_resetListShift.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_resetListShift.ForeColor = System.Drawing.Color.White;
+            this.button_resetListShift.Location = new System.Drawing.Point(63, 303);
+            this.button_resetListShift.Name = "button_resetListShift";
+            this.button_resetListShift.Size = new System.Drawing.Size(92, 32);
+            this.button_resetListShift.TabIndex = 12;
+            this.button_resetListShift.Text = "Reset";
+            this.button_resetListShift.Click += new System.EventHandler(this.button_resetListShift_Click);
             // 
-            // button_removeFacility
+            // button_addShift
             // 
-            this.button_removeFacility.BorderRadius = 20;
-            this.button_removeFacility.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.button_removeFacility.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.button_removeFacility.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button_removeFacility.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.button_removeFacility.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_removeFacility.ForeColor = System.Drawing.Color.White;
-            this.button_removeFacility.Location = new System.Drawing.Point(550, 509);
-            this.button_removeFacility.Name = "button_removeFacility";
-            this.button_removeFacility.Size = new System.Drawing.Size(222, 47);
-            this.button_removeFacility.TabIndex = 7;
-            this.button_removeFacility.Text = "Remove Facility";
+            this.button_addShift.BorderRadius = 20;
+            this.button_addShift.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_addShift.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_addShift.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_addShift.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_addShift.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_addShift.ForeColor = System.Drawing.Color.White;
+            this.button_addShift.Location = new System.Drawing.Point(63, 380);
+            this.button_addShift.Name = "button_addShift";
+            this.button_addShift.Size = new System.Drawing.Size(222, 47);
+            this.button_addShift.TabIndex = 10;
+            this.button_addShift.Text = "Add Shift";
+            this.button_addShift.Click += new System.EventHandler(this.button_addShift_Click);
+            // 
+            // dataGridView_listShift
+            // 
+            this.dataGridView_listShift.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_listShift.Location = new System.Drawing.Point(63, 52);
+            this.dataGridView_listShift.Name = "dataGridView_listShift";
+            this.dataGridView_listShift.RowHeadersWidth = 51;
+            this.dataGridView_listShift.RowTemplate.Height = 24;
+            this.dataGridView_listShift.Size = new System.Drawing.Size(646, 235);
+            this.dataGridView_listShift.TabIndex = 9;
+            this.dataGridView_listShift.Click += new System.EventHandler(this.dataGridView_listShift_Click);
+            // 
+            // button_reset
+            // 
+            this.button_reset.BorderRadius = 20;
+            this.button_reset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_reset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_reset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_reset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_reset.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_reset.ForeColor = System.Drawing.Color.White;
+            this.button_reset.Location = new System.Drawing.Point(6, 546);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(95, 34);
+            this.button_reset.TabIndex = 4;
+            this.button_reset.Text = "Reset";
+            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
             // 
             // DirectorMainForm
             // 
@@ -531,7 +631,7 @@
             this.Name = "DirectorMainForm";
             this.Text = "DirectorMainForm";
             this.Load += new System.EventHandler(this.DirectorMainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_directorImage)).EndInit();
             this.tabPage_profile.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
@@ -540,6 +640,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listManager)).EndInit();
             this.tabPage_facilityManagement.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listFacility)).EndInit();
+            this.tabPage_shift.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listShift)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -553,7 +655,7 @@
         private System.Windows.Forms.Label label_gender;
         private System.Windows.Forms.Label label_lastName;
         private System.Windows.Forms.Label label_firstName;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label_username;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -562,7 +664,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox_directorImage;
         private Guna.UI2.WinForms.Guna2Button button_editInformation;
         private System.Windows.Forms.TabPage tabPage_profile;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
@@ -579,5 +681,11 @@
         private Guna.UI2.WinForms.Guna2Button button_removeManager;
         private Guna.UI2.WinForms.Guna2Button button_removeFacility;
         private Guna.UI2.WinForms.Guna2Button button_updateFacility;
+        private System.Windows.Forms.TabPage tabPage_shift;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button button_resetListShift;
+        private Guna.UI2.WinForms.Guna2Button button_addShift;
+        private System.Windows.Forms.DataGridView dataGridView_listShift;
+        private Guna.UI2.WinForms.Guna2Button button_reset;
     }
 }

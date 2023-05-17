@@ -107,7 +107,7 @@
             this.birthday_picker.BorderRadius = 20;
             this.birthday_picker.Checked = true;
             this.birthday_picker.CustomFormat = "MM/dd/yyyy";
-            this.birthday_picker.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.birthday_picker.FillColor = System.Drawing.Color.White;
             this.birthday_picker.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthday_picker.ForeColor = System.Drawing.SystemColors.ControlText;
             this.birthday_picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;

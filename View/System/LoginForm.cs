@@ -1,5 +1,6 @@
 ﻿using FinalWindow.Database;
 using FinalWindow.Model;
+using FinalWindow.View.Customer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,9 +16,7 @@ namespace FinalWindow
 {
     public partial class LoginForm : Form
     {
-        private static int userID;
-
-        public static int UserID { get => userID; set => userID = value; }
+        
 
         public LoginForm()
         {
@@ -57,91 +56,103 @@ namespace FinalWindow
 
         private void button_Login_Click(object sender, EventArgs e)
         {
-            DatabaseContext databaseContext = new DatabaseContext();
-
-            string username = textBox_Username.Text;
-            string password = textBox_Password.Text;
-            string role = comboBox_role.SelectedIndex.ToString();
-
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            try
             {
-                MessageBox.Show("Please enter your username and password.");
-                return;
-            }
+                DatabaseContext databaseContext = new DatabaseContext();
 
-            if (string.IsNullOrEmpty(role))
-            {
-                MessageBox.Show("Please select your role.");
-                return;
-            }
+                string username = textBox_Username.Text;
+                string password = textBox_Password.Text;
+                string role = comboBox_role.SelectedIndex.ToString();
 
-            var checkUser = databaseContext.Users.Where(t => t.username == username && t.password == password).Count();
-
-            if (role == "4")
-            {
-                if (checkUser > 0)
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
-                    Director director = databaseContext.Users.OfType<Director>().Where(f => f.username == username).FirstOrDefault();
-                    // Login successful, show the main form
-                    DirectorMainForm mainFormm = new DirectorMainForm();
-                    UserID = director.ID;
-
-                    mainFormm.Show();
-
-
+                    MessageBox.Show("Please enter your username and password.");
+                    return;
                 }
-            }  
+
+                if (comboBox_role.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select your role.");
+                    return;
+                }
+
+                var checkUser = databaseContext.Users.Where(t => t.username == username && t.password == password).Count();
+
+                if (role == "4")
+                {
+                    if (checkUser > 0)
+                    {
+                        Director director = databaseContext.Users.OfType<Director>().Where(f => f.username == username).FirstOrDefault();
+                        // Login successful, show the main form
+                        DirectorMainForm mainFormm = new DirectorMainForm();
+                        DirectorMainForm.DirID = director.ID;
+
+                        mainFormm.Show();
+
+
+                    }
+                }
+
+                else if (role == "3")
+                {
+                    if (checkUser > 0)
+                    {
+                        Manager manager = databaseContext.Users.OfType<Manager>().Where(f => f.username == username).FirstOrDefault();
+                        // Login successful, show the main form
+                        ManagerMainForm mainFormm = new ManagerMainForm();
+                        ManagerMainForm.ManID = manager.ID;
+                        mainFormm.Show();
+
+                    }
+                }
+
+                else if (role == "0")
+                {
+                    if (checkUser > 0)
+                    {
+                        Customer customer = databaseContext.Users.OfType<Customer>().Where(f => f.username == username).FirstOrDefault();
+                        // Login successful, show the main form
+                        CustomerMainForm customerMainFormm = new CustomerMainForm();
+                        CustomerMainForm.CusID = customer.ID;
+                        customerMainFormm.Show();
+
+                    }
+                }
+
+                else if (role == "1")
+                {
+                    if (checkUser > 0)
+                    {
+                        FixWorker fixer = databaseContext.Users.OfType<FixWorker>().Where(f => f.username == username).FirstOrDefault();
+                        // Login successful, show the main form
+                        FixWorkerMainForm mainFormm = new FixWorkerMainForm();
+                        FixWorkerMainForm.FixID = fixer.ID;
+                        mainFormm.Show();
+
+                    }
+                }
+
+                else if (role == "2")
+                {
+                    if (checkUser > 0)
+                    {
+                        KeepWorker keeper = databaseContext.Users.OfType<KeepWorker>().Where(f => f.username == username).FirstOrDefault();
+                        // Login successful, show the main form
+                        KeepWorkerMainForm mainFormm = new KeepWorkerMainForm();
+                        KeepWorkerMainForm.KeepID = keeper.ID;
+                        mainFormm.Show();
+                    }
+                }
+                //else if(comboBox_role.SelectedItem ==  null)
+                //{
+                //    { MessageBox.Show("Please choose role to login.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                //}
+            }
+            catch(Exception ex)
+            {
+                { MessageBox.Show(ex.Message, "Notice", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
             
-            else if(role == "3")
-            {
-                if (checkUser > 0)
-                {
-                    Manager manager = databaseContext.Users.OfType<Manager>().Where(f => f.username == username).FirstOrDefault();
-                    // Login successful, show the main form
-                    ManagerMainForm mainFormm = new ManagerMainForm();
-                    UserID = manager.ID;
-                    mainFormm.Show();
-
-                }
-            }
-
-            else if (role == "0")
-            {
-                if (checkUser > 0)
-                {
-                    Customer customer = databaseContext.Users.OfType<Customer>().Where(f => f.username == username).FirstOrDefault();
-                    // Login successful, show the main form
-                    CustomerMainForm customerMainFormm = new CustomerMainForm();
-                    UserID = customer.ID;
-                    customerMainFormm.Show();
-
-                }
-            }
-
-            else if (role == "1")
-            {
-                if (checkUser > 0)
-                {
-                    FixWorker fixer = databaseContext.Users.OfType<FixWorker>().Where(f => f.username == username).FirstOrDefault();
-                    // Login successful, show the main form
-                    FixWorkerMainForm mainFormm = new FixWorkerMainForm();
-                    UserID = fixer.ID;
-                    mainFormm.Show();
-
-                }
-            }
-
-            else if (role == "2")
-            {
-                if (checkUser > 0)
-                {
-                    KeepWorker keeper = databaseContext.Users.OfType<KeepWorker>().Where(f => f.username == username).FirstOrDefault();
-                    // Login successful, show the main form
-                    KeepWorkerMainForm mainFormm = new KeepWorkerMainForm();
-                    UserID = keeper.ID;
-                    mainFormm.Show();
-                }
-            }
             
 
         }

@@ -51,6 +51,7 @@
             this.button_editInformation = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage_booking = new System.Windows.Forms.TabPage();
             this.tabPage_feedBack = new System.Windows.Forms.TabPage();
+            this.button_reset = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage_profile.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
@@ -91,6 +92,7 @@
             // tabPage_profile
             // 
             this.tabPage_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
+            this.tabPage_profile.Controls.Add(this.button_reset);
             this.tabPage_profile.Controls.Add(this.guna2GroupBox1);
             this.tabPage_profile.Controls.Add(this.button_editInformation);
             this.tabPage_profile.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -313,6 +315,7 @@
             this.pictureBox_profile.Name = "pictureBox_profile";
             this.pictureBox_profile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pictureBox_profile.Size = new System.Drawing.Size(108, 99);
+            this.pictureBox_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_profile.TabIndex = 0;
             this.pictureBox_profile.TabStop = false;
             // 
@@ -353,6 +356,22 @@
             this.tabPage_feedBack.Text = "Feedback";
             this.tabPage_feedBack.UseVisualStyleBackColor = true;
             // 
+            // button_reset
+            // 
+            this.button_reset.BorderRadius = 20;
+            this.button_reset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_reset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_reset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_reset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_reset.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_reset.ForeColor = System.Drawing.Color.White;
+            this.button_reset.Location = new System.Drawing.Point(6, 549);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(95, 34);
+            this.button_reset.TabIndex = 3;
+            this.button_reset.Text = "Reset";
+            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
+            // 
             // CustomerMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -381,13 +400,6 @@
         private Guna.UI2.WinForms.Guna2Button button_editInformation;
         private System.Windows.Forms.TabPage tabPage_feedBack;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private System.Windows.Forms.Label label_birthDate;
-        private System.Windows.Forms.Label label_address;
-        private System.Windows.Forms.Label label_email;
-        private System.Windows.Forms.Label label_phone;
-        private System.Windows.Forms.Label label_gender;
-        private System.Windows.Forms.Label label_lastName;
-        private System.Windows.Forms.Label label_firstName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -396,7 +408,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox_profile;
         public System.Windows.Forms.Label label_username;
+        public System.Windows.Forms.Label label_birthDate;
+        public System.Windows.Forms.Label label_address;
+        public System.Windows.Forms.Label label_email;
+        public System.Windows.Forms.Label label_phone;
+        public System.Windows.Forms.Label label_gender;
+        public System.Windows.Forms.Label label_lastName;
+        public System.Windows.Forms.Label label_firstName;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox_profile;
+        private Guna.UI2.WinForms.Guna2Button button_reset;
     }
 }

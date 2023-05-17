@@ -87,9 +87,9 @@
             this.button_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.button_update.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_update.ForeColor = System.Drawing.Color.White;
-            this.button_update.Location = new System.Drawing.Point(474, 667);
+            this.button_update.Location = new System.Drawing.Point(508, 667);
             this.button_update.Name = "button_update";
-            this.button_update.Size = new System.Drawing.Size(167, 45);
+            this.button_update.Size = new System.Drawing.Size(133, 45);
             this.button_update.TabIndex = 53;
             this.button_update.Text = "Update";
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
@@ -116,7 +116,7 @@
             this.birthday_picker.BorderRadius = 20;
             this.birthday_picker.Checked = true;
             this.birthday_picker.CustomFormat = "MM/dd/yyyy";
-            this.birthday_picker.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.birthday_picker.FillColor = System.Drawing.Color.White;
             this.birthday_picker.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthday_picker.ForeColor = System.Drawing.SystemColors.ControlText;
             this.birthday_picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -506,6 +506,7 @@
             this.Controls.Add(this.textBox_username);
             this.Name = "UpdateWorkerForm";
             this.Text = "UpdateWorkerForm";
+            this.Load += new System.EventHandler(this.UpdateWorkerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();

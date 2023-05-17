@@ -134,5 +134,14 @@ namespace FinalWindow.View.Manager.WorkerCRUD
                 MessageBox.Show("Update fail");
             }
         }
+
+        private void UpdateWorkerForm_Load(object sender, EventArgs e)
+        {
+            DatabaseContext context = new DatabaseContext();
+            comboBox_facilityID.DataSource = context.Facilities.ToList();
+            comboBox_facilityID.DisplayMember = "address";
+            comboBox_facilityID.ValueMember = "ID";
+            comboBox_facilityID.SelectedItem = null;
+        }
     }
 }

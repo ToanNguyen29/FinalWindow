@@ -53,6 +53,7 @@
             this.button_resetVehicle = new Guna.UI2.WinForms.Guna2Button();
             this.button_addVehicle = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView_listVehicle = new System.Windows.Forms.DataGridView();
+            this.button_reset = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_profile)).BeginInit();
             this.tabPage_profile.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
@@ -242,6 +243,7 @@
             this.pictureBox_profile.Name = "pictureBox_profile";
             this.pictureBox_profile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pictureBox_profile.Size = new System.Drawing.Size(108, 99);
+            this.pictureBox_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_profile.TabIndex = 0;
             this.pictureBox_profile.TabStop = false;
             // 
@@ -259,10 +261,12 @@
             this.button_editInformation.Size = new System.Drawing.Size(710, 84);
             this.button_editInformation.TabIndex = 1;
             this.button_editInformation.Text = "Edit your information";
+            this.button_editInformation.Click += new System.EventHandler(this.button_editInformation_Click);
             // 
             // tabPage_profile
             // 
             this.tabPage_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
+            this.tabPage_profile.Controls.Add(this.button_reset);
             this.tabPage_profile.Controls.Add(this.button_editInformation);
             this.tabPage_profile.Controls.Add(this.guna2GroupBox1);
             this.tabPage_profile.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -388,6 +392,22 @@
             this.dataGridView_listVehicle.Size = new System.Drawing.Size(749, 408);
             this.dataGridView_listVehicle.TabIndex = 6;
             // 
+            // button_reset
+            // 
+            this.button_reset.BorderRadius = 20;
+            this.button_reset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_reset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_reset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_reset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_reset.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_reset.ForeColor = System.Drawing.Color.White;
+            this.button_reset.Location = new System.Drawing.Point(6, 550);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(95, 34);
+            this.button_reset.TabIndex = 6;
+            this.button_reset.Text = "Reset";
+            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
+            // 
             // KeepWorkerMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -436,5 +456,6 @@
         private Guna.UI2.WinForms.Guna2Button button_resetVehicle;
         private Guna.UI2.WinForms.Guna2Button button_addVehicle;
         private System.Windows.Forms.DataGridView dataGridView_listVehicle;
+        private Guna.UI2.WinForms.Guna2Button button_reset;
     }
 }

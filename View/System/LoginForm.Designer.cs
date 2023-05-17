@@ -260,7 +260,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(223, 119);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 59);
+            this.label1.Size = new System.Drawing.Size(135, 57);
             this.label1.TabIndex = 12;
             this.label1.Text = "Login";
             // 
@@ -305,6 +305,6 @@
         private Guna.UI2.WinForms.Guna2TextBox textBox_Username;
         private Guna.UI2.WinForms.Guna2TextBox textBox_Password;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox comboBox_role;
+        public Guna.UI2.WinForms.Guna2ComboBox comboBox_role;
     }
 }

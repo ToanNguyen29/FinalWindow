@@ -22,6 +22,7 @@ namespace FinalWindow.Database
         public DbSet<User> Users { get; set; }
         public DbSet<Contract> Contracts { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<Shift> Shifts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

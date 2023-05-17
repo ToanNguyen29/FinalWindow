@@ -52,17 +52,20 @@
             this.tabPage_workerManagement = new System.Windows.Forms.TabPage();
             this.tabControl_typeWorker = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage_fixWorker = new System.Windows.Forms.TabPage();
+            this.button_shiftFix = new Guna.UI2.WinForms.Guna2Button();
             this.button_removeFixWorker = new Guna.UI2.WinForms.Guna2Button();
             this.button_updateFixWorker = new Guna.UI2.WinForms.Guna2Button();
             this.button_resetFix = new Guna.UI2.WinForms.Guna2Button();
             this.button_addFixWorker = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView_listFixWorker = new System.Windows.Forms.DataGridView();
             this.tabPage_keepWorker = new System.Windows.Forms.TabPage();
+            this.button_shiftKeep = new Guna.UI2.WinForms.Guna2Button();
             this.button_removeKeepWorker = new Guna.UI2.WinForms.Guna2Button();
             this.button_updateKeepWorker = new Guna.UI2.WinForms.Guna2Button();
             this.button_resetKeep = new Guna.UI2.WinForms.Guna2Button();
             this.button_addKeepWorker = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView_listKeepWorker = new System.Windows.Forms.DataGridView();
+            this.button_reset = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl_manager.SuspendLayout();
             this.tabPage_profile.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
@@ -108,6 +111,7 @@
             // tabPage_profile
             // 
             this.tabPage_profile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
+            this.tabPage_profile.Controls.Add(this.button_reset);
             this.tabPage_profile.Controls.Add(this.button_editInformation);
             this.tabPage_profile.Controls.Add(this.guna2GroupBox1);
             this.tabPage_profile.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,6 +136,7 @@
             this.button_editInformation.Size = new System.Drawing.Size(710, 84);
             this.button_editInformation.TabIndex = 1;
             this.button_editInformation.Text = "Edit your information";
+            this.button_editInformation.Click += new System.EventHandler(this.button_editInformation_Click);
             // 
             // guna2GroupBox1
             // 
@@ -391,6 +396,7 @@
             // tabPage_fixWorker
             // 
             this.tabPage_fixWorker.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tabPage_fixWorker.Controls.Add(this.button_shiftFix);
             this.tabPage_fixWorker.Controls.Add(this.button_removeFixWorker);
             this.tabPage_fixWorker.Controls.Add(this.button_updateFixWorker);
             this.tabPage_fixWorker.Controls.Add(this.button_resetFix);
@@ -402,6 +408,23 @@
             this.tabPage_fixWorker.Size = new System.Drawing.Size(786, 534);
             this.tabPage_fixWorker.TabIndex = 0;
             this.tabPage_fixWorker.Text = "Fix Worker";
+            // 
+            // button_shiftFix
+            // 
+            this.button_shiftFix.BorderRadius = 20;
+            this.button_shiftFix.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_shiftFix.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_shiftFix.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_shiftFix.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_shiftFix.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.button_shiftFix.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_shiftFix.ForeColor = System.Drawing.Color.White;
+            this.button_shiftFix.Location = new System.Drawing.Point(510, 371);
+            this.button_shiftFix.Name = "button_shiftFix";
+            this.button_shiftFix.Size = new System.Drawing.Size(222, 47);
+            this.button_shiftFix.TabIndex = 14;
+            this.button_shiftFix.Text = "Shift Work";
+            this.button_shiftFix.Click += new System.EventHandler(this.button_shiftFix_Click);
             // 
             // button_removeFixWorker
             // 
@@ -446,7 +469,7 @@
             this.button_resetFix.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.button_resetFix.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_resetFix.ForeColor = System.Drawing.Color.White;
-            this.button_resetFix.Location = new System.Drawing.Point(28, 360);
+            this.button_resetFix.Location = new System.Drawing.Point(28, 371);
             this.button_resetFix.Name = "button_resetFix";
             this.button_resetFix.Size = new System.Drawing.Size(92, 32);
             this.button_resetFix.TabIndex = 8;
@@ -483,6 +506,7 @@
             // tabPage_keepWorker
             // 
             this.tabPage_keepWorker.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tabPage_keepWorker.Controls.Add(this.button_shiftKeep);
             this.tabPage_keepWorker.Controls.Add(this.button_removeKeepWorker);
             this.tabPage_keepWorker.Controls.Add(this.button_updateKeepWorker);
             this.tabPage_keepWorker.Controls.Add(this.button_resetKeep);
@@ -494,6 +518,23 @@
             this.tabPage_keepWorker.Size = new System.Drawing.Size(786, 534);
             this.tabPage_keepWorker.TabIndex = 1;
             this.tabPage_keepWorker.Text = "Keep Worker";
+            // 
+            // button_shiftKeep
+            // 
+            this.button_shiftKeep.BorderRadius = 20;
+            this.button_shiftKeep.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_shiftKeep.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_shiftKeep.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_shiftKeep.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_shiftKeep.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.button_shiftKeep.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_shiftKeep.ForeColor = System.Drawing.Color.White;
+            this.button_shiftKeep.Location = new System.Drawing.Point(503, 371);
+            this.button_shiftKeep.Name = "button_shiftKeep";
+            this.button_shiftKeep.Size = new System.Drawing.Size(222, 47);
+            this.button_shiftKeep.TabIndex = 15;
+            this.button_shiftKeep.Text = "Shift Work";
+            this.button_shiftKeep.Click += new System.EventHandler(this.button_shiftKeep_Click);
             // 
             // button_removeKeepWorker
             // 
@@ -526,6 +567,7 @@
             this.button_updateKeepWorker.Size = new System.Drawing.Size(222, 47);
             this.button_updateKeepWorker.TabIndex = 14;
             this.button_updateKeepWorker.Text = "Update Worker";
+            this.button_updateKeepWorker.Click += new System.EventHandler(this.button_updateKeepWorker_Click);
             // 
             // button_resetKeep
             // 
@@ -570,6 +612,22 @@
             this.dataGridView_listKeepWorker.RowTemplate.Height = 24;
             this.dataGridView_listKeepWorker.Size = new System.Drawing.Size(666, 335);
             this.dataGridView_listKeepWorker.TabIndex = 10;
+            // 
+            // button_reset
+            // 
+            this.button_reset.BorderRadius = 20;
+            this.button_reset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_reset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_reset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_reset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_reset.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_reset.ForeColor = System.Drawing.Color.White;
+            this.button_reset.Location = new System.Drawing.Point(6, 548);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(95, 34);
+            this.button_reset.TabIndex = 5;
+            this.button_reset.Text = "Reset";
+            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
             // 
             // ManagerMainForm
             // 
@@ -626,12 +684,15 @@
         private Guna.UI2.WinForms.Guna2Button button_updateKeepWorker;
         private Guna.UI2.WinForms.Guna2Button button_resetKeep;
         private Guna.UI2.WinForms.Guna2Button button_addKeepWorker;
-        private System.Windows.Forms.DataGridView dataGridView_listKeepWorker;
         private System.Windows.Forms.TabPage tabPage_fixWorker;
         private Guna.UI2.WinForms.Guna2Button button_removeFixWorker;
         private Guna.UI2.WinForms.Guna2Button button_updateFixWorker;
         private Guna.UI2.WinForms.Guna2Button button_resetFix;
         private Guna.UI2.WinForms.Guna2Button button_addFixWorker;
-        private System.Windows.Forms.DataGridView dataGridView_listFixWorker;
+        private Guna.UI2.WinForms.Guna2Button button_shiftFix;
+        private Guna.UI2.WinForms.Guna2Button button_shiftKeep;
+        public System.Windows.Forms.DataGridView dataGridView_listKeepWorker;
+        public System.Windows.Forms.DataGridView dataGridView_listFixWorker;
+        private Guna.UI2.WinForms.Guna2Button button_reset;
     }
 }
