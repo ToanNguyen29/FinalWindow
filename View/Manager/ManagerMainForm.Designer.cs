@@ -65,7 +65,11 @@
             this.button_resetKeep = new Guna.UI2.WinForms.Guna2Button();
             this.button_addKeepWorker = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView_listKeepWorker = new System.Windows.Forms.DataGridView();
+
+            this.tabPage_ContractManagement = new System.Windows.Forms.TabPage();
+
             this.button_reset = new Guna.UI2.WinForms.Guna2Button();
+
             this.tabControl_manager.SuspendLayout();
             this.tabPage_profile.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
@@ -83,6 +87,7 @@
             this.tabControl_manager.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControl_manager.Controls.Add(this.tabPage_profile);
             this.tabControl_manager.Controls.Add(this.tabPage_workerManagement);
+            this.tabControl_manager.Controls.Add(this.tabPage_ContractManagement);
             this.tabControl_manager.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl_manager.ItemSize = new System.Drawing.Size(180, 40);
             this.tabControl_manager.Location = new System.Drawing.Point(11, 12);
@@ -500,7 +505,7 @@
             this.dataGridView_listFixWorker.Name = "dataGridView_listFixWorker";
             this.dataGridView_listFixWorker.RowHeadersWidth = 51;
             this.dataGridView_listFixWorker.RowTemplate.Height = 24;
-            this.dataGridView_listFixWorker.Size = new System.Drawing.Size(666, 335);
+            this.dataGridView_listFixWorker.Size = new System.Drawing.Size(720, 335);
             this.dataGridView_listFixWorker.TabIndex = 5;
             // 
             // tabPage_keepWorker
@@ -610,9 +615,20 @@
             this.dataGridView_listKeepWorker.Name = "dataGridView_listKeepWorker";
             this.dataGridView_listKeepWorker.RowHeadersWidth = 51;
             this.dataGridView_listKeepWorker.RowTemplate.Height = 24;
-            this.dataGridView_listKeepWorker.Size = new System.Drawing.Size(666, 335);
+            this.dataGridView_listKeepWorker.Size = new System.Drawing.Size(746, 335);
             this.dataGridView_listKeepWorker.TabIndex = 10;
             // 
+
+            // tabPage_ContractManagement
+            // 
+            this.tabPage_ContractManagement.Location = new System.Drawing.Point(184, 4);
+            this.tabPage_ContractManagement.Name = "tabPage_ContractManagement";
+            this.tabPage_ContractManagement.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_ContractManagement.Size = new System.Drawing.Size(845, 603);
+            this.tabPage_ContractManagement.TabIndex = 2;
+            this.tabPage_ContractManagement.Text = "Contract";
+            this.tabPage_ContractManagement.UseVisualStyleBackColor = true;
+
             // button_reset
             // 
             this.button_reset.BorderRadius = 20;
@@ -628,6 +644,7 @@
             this.button_reset.TabIndex = 5;
             this.button_reset.Text = "Reset";
             this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
+
             // 
             // ManagerMainForm
             // 
@@ -689,10 +706,15 @@
         private Guna.UI2.WinForms.Guna2Button button_updateFixWorker;
         private Guna.UI2.WinForms.Guna2Button button_resetFix;
         private Guna.UI2.WinForms.Guna2Button button_addFixWorker;
+
+        private System.Windows.Forms.DataGridView dataGridView_listFixWorker;
+        private System.Windows.Forms.TabPage tabPage_ContractManagement;
+
         private Guna.UI2.WinForms.Guna2Button button_shiftFix;
         private Guna.UI2.WinForms.Guna2Button button_shiftKeep;
         public System.Windows.Forms.DataGridView dataGridView_listKeepWorker;
         public System.Windows.Forms.DataGridView dataGridView_listFixWorker;
         private Guna.UI2.WinForms.Guna2Button button_reset;
+
     }
 }

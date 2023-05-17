@@ -80,6 +80,7 @@ namespace FinalWindow
 
                 if (role == "4")
                 {
+
                     if (checkUser > 0)
                     {
                         Director director = databaseContext.Users.OfType<Director>().Where(f => f.username == username).FirstOrDefault();
@@ -87,11 +88,13 @@ namespace FinalWindow
                         DirectorMainForm mainFormm = new DirectorMainForm();
                         DirectorMainForm.DirID = director.ID;
 
+
                         mainFormm.Show();
 
 
                     }
                 }
+
 
                 else if (role == "3")
                 {
@@ -108,6 +111,7 @@ namespace FinalWindow
 
                 else if (role == "0")
                 {
+
                     if (checkUser > 0)
                     {
                         Customer customer = databaseContext.Users.OfType<Customer>().Where(f => f.username == username).FirstOrDefault();
@@ -117,10 +121,12 @@ namespace FinalWindow
                         customerMainFormm.Show();
 
                     }
+
                 }
 
                 else if (role == "1")
                 {
+
                     if (checkUser > 0)
                     {
                         FixWorker fixer = databaseContext.Users.OfType<FixWorker>().Where(f => f.username == username).FirstOrDefault();
@@ -130,10 +136,12 @@ namespace FinalWindow
                         mainFormm.Show();
 
                     }
+
                 }
 
                 else if (role == "2")
                 {
+
                     if (checkUser > 0)
                     {
                         KeepWorker keeper = databaseContext.Users.OfType<KeepWorker>().Where(f => f.username == username).FirstOrDefault();
@@ -142,6 +150,7 @@ namespace FinalWindow
                         KeepWorkerMainForm.KeepID = keeper.ID;
                         mainFormm.Show();
                     }
+
                 }
                 //else if(comboBox_role.SelectedItem ==  null)
                 //{

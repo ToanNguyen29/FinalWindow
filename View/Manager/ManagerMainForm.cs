@@ -28,6 +28,11 @@ namespace FinalWindow
             InitializeComponent();
         }
 
+
+        private static int manID;
+
+        public static int ManID { get => manID; set => manID = value; }
+
         void loadKeepDataGridView()
         {
             try
@@ -45,6 +50,7 @@ namespace FinalWindow
                             Gender = u.gender,
                             Phone = u.phone,
                             FacilityID = u.facilityID
+
 
                         })
                         .ToList();

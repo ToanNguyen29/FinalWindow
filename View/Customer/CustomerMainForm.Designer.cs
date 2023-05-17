@@ -51,11 +51,18 @@
             this.button_editInformation = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage_booking = new System.Windows.Forms.TabPage();
             this.tabPage_feedBack = new System.Windows.Forms.TabPage();
+
+            this.button_loanContract = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.label9 = new System.Windows.Forms.Label();
+
             this.button_reset = new Guna.UI2.WinForms.Guna2Button();
+
             this.guna2TabControl1.SuspendLayout();
             this.tabPage_profile.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_profile)).BeginInit();
+            this.tabPage_booking.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2TabControl1
@@ -337,6 +344,9 @@
             // 
             // tabPage_booking
             // 
+            this.tabPage_booking.Controls.Add(this.label9);
+            this.tabPage_booking.Controls.Add(this.guna2Button3);
+            this.tabPage_booking.Controls.Add(this.button_loanContract);
             this.tabPage_booking.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.tabPage_booking.Location = new System.Drawing.Point(184, 4);
             this.tabPage_booking.Name = "tabPage_booking";
@@ -356,6 +366,49 @@
             this.tabPage_feedBack.Text = "Feedback";
             this.tabPage_feedBack.UseVisualStyleBackColor = true;
             // 
+
+            // button_loanContract
+            // 
+            this.button_loanContract.BorderRadius = 20;
+            this.button_loanContract.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_loanContract.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_loanContract.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_loanContract.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_loanContract.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_loanContract.ForeColor = System.Drawing.Color.White;
+            this.button_loanContract.Location = new System.Drawing.Point(43, 120);
+            this.button_loanContract.Name = "button_loanContract";
+            this.button_loanContract.Size = new System.Drawing.Size(525, 70);
+            this.button_loanContract.TabIndex = 4;
+            this.button_loanContract.Text = "Loan vehicle Service";
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.BorderRadius = 20;
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.Location = new System.Drawing.Point(43, 211);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(525, 70);
+            this.guna2Button3.TabIndex = 5;
+            this.guna2Button3.Text = "Keep Vehicle Service";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label9.Location = new System.Drawing.Point(39, 31);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(350, 57);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "SELECT SERVICE:";
+
             // button_reset
             // 
             this.button_reset.BorderRadius = 20;
@@ -371,6 +424,7 @@
             this.button_reset.TabIndex = 3;
             this.button_reset.Text = "Reset";
             this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
+
             // 
             // CustomerMainForm
             // 
@@ -388,6 +442,8 @@
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_profile)).EndInit();
+            this.tabPage_booking.ResumeLayout(false);
+            this.tabPage_booking.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -409,6 +465,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label_username;
+
+        public System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button button_loanContract;
+
         public System.Windows.Forms.Label label_birthDate;
         public System.Windows.Forms.Label label_address;
         public System.Windows.Forms.Label label_email;
@@ -418,5 +479,6 @@
         public System.Windows.Forms.Label label_firstName;
         public Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox_profile;
         private Guna.UI2.WinForms.Guna2Button button_reset;
+
     }
 }

@@ -3,16 +3,16 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class nts1 : DbMigration
+    public partial class ntt2 : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Customers", "picture", c => c.Binary());
+            AddColumn("dbo.LongTermKeepContracts", "typeContract", c => c.String());
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Customers", "picture");
+            DropColumn("dbo.LongTermKeepContracts", "typeContract");
         }
     }
 }

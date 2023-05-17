@@ -17,15 +17,18 @@ namespace FinalWindow
 {
     public partial class FixWorkerMainForm : Form
     {
+
+
         private static int fixID;
-        public static int FixID { get => fixID; set => fixID = value; }
 
         public FixWorkerMainForm()
         {
             InitializeComponent();
         }
 
-       
+
+        public static int FixID { get => fixID; set => fixID = value; }
+
 
         private void FixWorkerMainForm_Load(object sender, EventArgs e)
         {

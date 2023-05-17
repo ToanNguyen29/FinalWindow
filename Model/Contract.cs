@@ -18,14 +18,11 @@ namespace FinalWindow.Model
 
         public string key { get; set; }
 
-        public string typeVehicle { get; set; }
-
-        public int? ruleID { get; set; }
-        public Rule Rule { get; set; }
+        public string rule { get; set; }
 
         public DateTime? dateStartActual { get; set; }
         public DateTime? dateEnd { get; set; }
-        public DateTime? dateStart { get; set; }
+        public DateTime? dateCreate { get; set; }
         public DateTime? dateEndActual { get; set; }
 
         public float? fee { get; set; }
@@ -43,6 +40,9 @@ namespace FinalWindow.Model
 
         public int? truckID { get; set; }
         public Truck Truck { get; set; }
+
+        public int? facilityId { get; set; }
+        public Facility Facility { get; set; }
 
         [MaxLength(50)]
         public string status { get; set; }

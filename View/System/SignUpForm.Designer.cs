@@ -46,6 +46,10 @@ namespace FinalWindow
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.textBox_Username = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBox_Password = new Guna.UI2.WinForms.Guna2TextBox();
+
+            this.errorProvider_username = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider_email = new System.Windows.Forms.ErrorProvider(this.components);
+
             this.errorProvider_phone = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider_email = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider_username = new System.Windows.Forms.ErrorProvider(this.components);
@@ -55,6 +59,10 @@ namespace FinalWindow
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_username)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_email)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_phone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_email)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_username)).BeginInit();
@@ -356,7 +364,11 @@ namespace FinalWindow
             // 
             this.errorProvider_email.ContainerControl = this;
             // 
+
+            // errorProvider_phone
+
             // errorProvider_username
+
             // 
             this.errorProvider_username.ContainerControl = this;
             // 
@@ -380,6 +392,10 @@ namespace FinalWindow
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_username)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_email)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_phone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_email)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_username)).EndInit();

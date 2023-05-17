@@ -17,14 +17,16 @@ namespace FinalWindow
 {
     public partial class CustomerMainForm : Form
     {
-        private static int cusID;
-        public static int CusID { get => cusID; set => cusID = value; }
+
         public CustomerMainForm()
         {
             InitializeComponent();
         }
 
-        
+<
+        private static int cusID;
+        internal static int CusID { get => cusID; set => cusID = value; }
+
 
         private void button_editInformation_Click(object sender, EventArgs e)
         {
@@ -77,8 +79,10 @@ namespace FinalWindow
         void loadProfile()
         {
             DatabaseContext context = new DatabaseContext();
-            var cus = context.Users.OfType<Customer>().Where(t => t.ID == cusID).FirstOrDefault();
-            if (cus.picture != null)
+
+            var cus = context.Users.OfType<Customer>().Where(t=>t.ID==cusID).FirstOrDefault();
+            if(cus.picture != null)
+
             {
                 byte[] imageData = (byte[])cus.picture;
                 using (MemoryStream ms = new MemoryStream(imageData))

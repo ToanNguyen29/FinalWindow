@@ -49,10 +49,7 @@ namespace FinalWindow.View.Director.FacilityCRUD
                     else
                     {
                         facility.address = textBox_facilityAddress.Text;
-                        facility.quatityFix = Convert.ToInt32(textBox_quantityFix.Text);
-                        facility.quantityKeep = Convert.ToInt32(textBox_quantityFix.Text);    
-                        
-
+                            
                         context.SaveChanges();
                         MessageBox.Show("Update successfully !!!");
                     }
@@ -68,6 +65,22 @@ namespace FinalWindow.View.Director.FacilityCRUD
             {
                 MessageBox.Show("Update fail");
             }
+        }
+
+        private void UpdateFacilityForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Manager_Click(object sender, EventArgs e)
+        {
+            ListManagerForm listMan = new ListManagerForm();
+            listMan.Show();
         }
     }
 }

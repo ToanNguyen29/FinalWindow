@@ -61,6 +61,31 @@
             this.button_resetFacility = new Guna.UI2.WinForms.Guna2Button();
             this.button_addFacility = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridView_listFacility = new System.Windows.Forms.DataGridView();
+
+            this.tabPage_contractManagement = new System.Windows.Forms.TabPage();
+            this.tabControl_Contract = new Guna.UI2.WinForms.Guna2TabControl();
+            this.LongTermContract = new System.Windows.Forms.TabPage();
+            this.groupBox_LongContract = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.label_totalDone = new System.Windows.Forms.Label();
+            this.label_totalProgress = new System.Windows.Forms.Label();
+            this.button_ShowLong = new Guna.UI2.WinForms.Guna2Button();
+            this.comboBox_facilityLong = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox_ruleLong = new Guna.UI2.WinForms.Guna2TextBox();
+            this.button_setRuleLong = new Guna.UI2.WinForms.Guna2Button();
+            this.LoanContract = new System.Windows.Forms.TabPage();
+            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.button_showListLoan = new Guna.UI2.WinForms.Guna2Button();
+            this.combobox_facilityLoan = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox_ruleLoan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.button_setRuleLoan = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+
             this.tabPage_shift = new System.Windows.Forms.TabPage();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.button_resetListShift = new Guna.UI2.WinForms.Guna2Button();
@@ -68,6 +93,7 @@
             this.dataGridView_listShift = new System.Windows.Forms.DataGridView();
             this.button_reset = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_directorImage)).BeginInit();
+
             this.tabPage_profile.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.tabControl_director.SuspendLayout();
@@ -75,8 +101,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listManager)).BeginInit();
             this.tabPage_facilityManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listFacility)).BeginInit();
+
+            this.tabPage_contractManagement.SuspendLayout();
+            this.tabControl_Contract.SuspendLayout();
+            this.LongTermContract.SuspendLayout();
+            this.groupBox_LongContract.SuspendLayout();
+            this.LoanContract.SuspendLayout();
+            this.guna2GroupBox2.SuspendLayout();
+
             this.tabPage_shift.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listShift)).BeginInit();
+
             this.SuspendLayout();
             // 
             // label_birthDate
@@ -330,7 +365,11 @@
             this.tabControl_director.Controls.Add(this.tabPage_profile);
             this.tabControl_director.Controls.Add(this.tabPage_managerManagement);
             this.tabControl_director.Controls.Add(this.tabPage_facilityManagement);
+
+            this.tabControl_director.Controls.Add(this.tabPage_contractManagement);
+
             this.tabControl_director.Controls.Add(this.tabPage_shift);
+
             this.tabControl_director.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl_director.ItemSize = new System.Drawing.Size(180, 40);
             this.tabControl_director.Location = new System.Drawing.Point(12, 12);
@@ -532,6 +571,345 @@
             this.dataGridView_listFacility.Size = new System.Drawing.Size(749, 408);
             this.dataGridView_listFacility.TabIndex = 1;
             this.dataGridView_listFacility.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_listFacility_CellContentClick);
+
+            this.dataGridView_listFacility.DoubleClick += new System.EventHandler(this.dataGridView_listFacility_DoubleClick);
+            // 
+            // tabPage_contractManagement
+            // 
+            this.tabPage_contractManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
+            this.tabPage_contractManagement.Controls.Add(this.tabControl_Contract);
+            this.tabPage_contractManagement.Location = new System.Drawing.Point(184, 4);
+            this.tabPage_contractManagement.Name = "tabPage_contractManagement";
+            this.tabPage_contractManagement.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_contractManagement.Size = new System.Drawing.Size(845, 603);
+            this.tabPage_contractManagement.TabIndex = 3;
+            this.tabPage_contractManagement.Text = "Contracts";
+            // 
+            // tabControl_Contract
+            // 
+            this.tabControl_Contract.Controls.Add(this.LongTermContract);
+            this.tabControl_Contract.Controls.Add(this.LoanContract);
+            this.tabControl_Contract.ItemSize = new System.Drawing.Size(180, 40);
+            this.tabControl_Contract.Location = new System.Drawing.Point(6, 6);
+            this.tabControl_Contract.Name = "tabControl_Contract";
+            this.tabControl_Contract.SelectedIndex = 0;
+            this.tabControl_Contract.Size = new System.Drawing.Size(836, 591);
+            this.tabControl_Contract.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
+            this.tabControl_Contract.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.tabControl_Contract.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tabControl_Contract.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
+            this.tabControl_Contract.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.tabControl_Contract.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
+            this.tabControl_Contract.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.tabControl_Contract.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tabControl_Contract.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.tabControl_Contract.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.tabControl_Contract.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
+            this.tabControl_Contract.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
+            this.tabControl_Contract.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.tabControl_Contract.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
+            this.tabControl_Contract.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.tabControl_Contract.TabButtonSize = new System.Drawing.Size(180, 40);
+            this.tabControl_Contract.TabIndex = 0;
+            this.tabControl_Contract.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.tabControl_Contract.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
+            // 
+            // LongTermContract
+            // 
+            this.LongTermContract.Controls.Add(this.groupBox_LongContract);
+            this.LongTermContract.Controls.Add(this.textBox_ruleLong);
+            this.LongTermContract.Controls.Add(this.button_setRuleLong);
+            this.LongTermContract.Location = new System.Drawing.Point(4, 44);
+            this.LongTermContract.Name = "LongTermContract";
+            this.LongTermContract.Padding = new System.Windows.Forms.Padding(3);
+            this.LongTermContract.Size = new System.Drawing.Size(828, 543);
+            this.LongTermContract.TabIndex = 0;
+            this.LongTermContract.Text = "Long term contract";
+            this.LongTermContract.UseVisualStyleBackColor = true;
+            this.LongTermContract.Click += new System.EventHandler(this.LongTermContract_Click);
+            // 
+            // groupBox_LongContract
+            // 
+            this.groupBox_LongContract.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.groupBox_LongContract.BorderRadius = 20;
+            this.groupBox_LongContract.Controls.Add(this.label_totalDone);
+            this.groupBox_LongContract.Controls.Add(this.label_totalProgress);
+            this.groupBox_LongContract.Controls.Add(this.button_ShowLong);
+            this.groupBox_LongContract.Controls.Add(this.comboBox_facilityLong);
+            this.groupBox_LongContract.Controls.Add(this.label12);
+            this.groupBox_LongContract.Controls.Add(this.label11);
+            this.groupBox_LongContract.Controls.Add(this.label10);
+            this.groupBox_LongContract.CustomBorderColor = System.Drawing.Color.White;
+            this.groupBox_LongContract.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.groupBox_LongContract.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox_LongContract.Location = new System.Drawing.Point(32, 29);
+            this.groupBox_LongContract.Name = "groupBox_LongContract";
+            this.groupBox_LongContract.Size = new System.Drawing.Size(389, 269);
+            this.groupBox_LongContract.TabIndex = 47;
+            // 
+            // label_totalDone
+            // 
+            this.label_totalDone.AutoSize = true;
+            this.label_totalDone.BackColor = System.Drawing.Color.White;
+            this.label_totalDone.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_totalDone.Location = new System.Drawing.Point(299, 142);
+            this.label_totalDone.Name = "label_totalDone";
+            this.label_totalDone.Size = new System.Drawing.Size(40, 20);
+            this.label_totalDone.TabIndex = 51;
+            this.label_totalDone.Text = "total";
+            // 
+            // label_totalProgress
+            // 
+            this.label_totalProgress.AutoSize = true;
+            this.label_totalProgress.BackColor = System.Drawing.Color.White;
+            this.label_totalProgress.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_totalProgress.Location = new System.Drawing.Point(299, 92);
+            this.label_totalProgress.Name = "label_totalProgress";
+            this.label_totalProgress.Size = new System.Drawing.Size(40, 20);
+            this.label_totalProgress.TabIndex = 50;
+            this.label_totalProgress.Text = "total";
+            // 
+            // button_ShowLong
+            // 
+            this.button_ShowLong.BorderRadius = 20;
+            this.button_ShowLong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_ShowLong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_ShowLong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_ShowLong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_ShowLong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ShowLong.ForeColor = System.Drawing.Color.White;
+            this.button_ShowLong.Location = new System.Drawing.Point(66, 190);
+            this.button_ShowLong.Name = "button_ShowLong";
+            this.button_ShowLong.Size = new System.Drawing.Size(222, 47);
+            this.button_ShowLong.TabIndex = 48;
+            this.button_ShowLong.Text = "Show list";
+            this.button_ShowLong.Click += new System.EventHandler(this.button_ShowLong_Click);
+            // 
+            // comboBox_facilityLong
+            // 
+            this.comboBox_facilityLong.BackColor = System.Drawing.Color.Transparent;
+            this.comboBox_facilityLong.BorderRadius = 20;
+            this.comboBox_facilityLong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox_facilityLong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_facilityLong.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox_facilityLong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBox_facilityLong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_facilityLong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBox_facilityLong.ItemHeight = 30;
+            this.comboBox_facilityLong.Location = new System.Drawing.Point(100, 24);
+            this.comboBox_facilityLong.Name = "comboBox_facilityLong";
+            this.comboBox_facilityLong.Size = new System.Drawing.Size(201, 36);
+            this.comboBox_facilityLong.TabIndex = 49;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label12.Location = new System.Drawing.Point(30, 142);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(258, 20);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Total number of completed contracts:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label11.Location = new System.Drawing.Point(30, 92);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(263, 20);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Total number of contracts in progress: ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label10.Location = new System.Drawing.Point(30, 40);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(57, 20);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Facility:";
+            // 
+            // textBox_ruleLong
+            // 
+            this.textBox_ruleLong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_ruleLong.BorderRadius = 20;
+            this.textBox_ruleLong.BorderThickness = 0;
+            this.textBox_ruleLong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_ruleLong.DefaultText = "";
+            this.textBox_ruleLong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox_ruleLong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox_ruleLong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_ruleLong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_ruleLong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_ruleLong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.textBox_ruleLong.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBox_ruleLong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_ruleLong.Location = new System.Drawing.Point(446, 29);
+            this.textBox_ruleLong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox_ruleLong.Name = "textBox_ruleLong";
+            this.textBox_ruleLong.PasswordChar = '\0';
+            this.textBox_ruleLong.PlaceholderText = "Type rule";
+            this.textBox_ruleLong.SelectedText = "";
+            this.textBox_ruleLong.Size = new System.Drawing.Size(358, 429);
+            this.textBox_ruleLong.TabIndex = 12;
+            // 
+            // button_setRuleLong
+            // 
+            this.button_setRuleLong.BorderRadius = 20;
+            this.button_setRuleLong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_setRuleLong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_setRuleLong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_setRuleLong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_setRuleLong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_setRuleLong.ForeColor = System.Drawing.Color.White;
+            this.button_setRuleLong.Location = new System.Drawing.Point(517, 480);
+            this.button_setRuleLong.Name = "button_setRuleLong";
+            this.button_setRuleLong.Size = new System.Drawing.Size(222, 47);
+            this.button_setRuleLong.TabIndex = 6;
+            this.button_setRuleLong.Text = "Set rule";
+            this.button_setRuleLong.Click += new System.EventHandler(this.button_setRuleLong_Click);
+            // 
+            // LoanContract
+            // 
+            this.LoanContract.Controls.Add(this.guna2GroupBox2);
+            this.LoanContract.Controls.Add(this.textBox_ruleLoan);
+            this.LoanContract.Controls.Add(this.button_setRuleLoan);
+            this.LoanContract.Location = new System.Drawing.Point(4, 44);
+            this.LoanContract.Name = "LoanContract";
+            this.LoanContract.Padding = new System.Windows.Forms.Padding(3);
+            this.LoanContract.Size = new System.Drawing.Size(828, 543);
+            this.LoanContract.TabIndex = 1;
+            this.LoanContract.Text = "Loan contract";
+            this.LoanContract.UseVisualStyleBackColor = true;
+            this.LoanContract.Click += new System.EventHandler(this.LoanContract_Click);
+            // 
+            // guna2GroupBox2
+            // 
+            this.guna2GroupBox2.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.guna2GroupBox2.BorderRadius = 20;
+            this.guna2GroupBox2.Controls.Add(this.button_showListLoan);
+            this.guna2GroupBox2.Controls.Add(this.combobox_facilityLoan);
+            this.guna2GroupBox2.Controls.Add(this.label13);
+            this.guna2GroupBox2.Controls.Add(this.label14);
+            this.guna2GroupBox2.Controls.Add(this.label15);
+            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.White;
+            this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.guna2GroupBox2.Location = new System.Drawing.Point(28, 22);
+            this.guna2GroupBox2.Name = "guna2GroupBox2";
+            this.guna2GroupBox2.Size = new System.Drawing.Size(389, 269);
+            this.guna2GroupBox2.TabIndex = 50;
+            // 
+            // button_showListLoan
+            // 
+            this.button_showListLoan.BorderRadius = 20;
+            this.button_showListLoan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_showListLoan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_showListLoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_showListLoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_showListLoan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_showListLoan.ForeColor = System.Drawing.Color.White;
+            this.button_showListLoan.Location = new System.Drawing.Point(66, 190);
+            this.button_showListLoan.Name = "button_showListLoan";
+            this.button_showListLoan.Size = new System.Drawing.Size(222, 47);
+            this.button_showListLoan.TabIndex = 48;
+            this.button_showListLoan.Text = "Show list";
+            this.button_showListLoan.Click += new System.EventHandler(this.button_showListLoan_Click);
+            // 
+            // combobox_facilityLoan
+            // 
+            this.combobox_facilityLoan.BackColor = System.Drawing.Color.Transparent;
+            this.combobox_facilityLoan.BorderRadius = 20;
+            this.combobox_facilityLoan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combobox_facilityLoan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_facilityLoan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combobox_facilityLoan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combobox_facilityLoan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combobox_facilityLoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.combobox_facilityLoan.ItemHeight = 30;
+            this.combobox_facilityLoan.Location = new System.Drawing.Point(100, 24);
+            this.combobox_facilityLoan.Name = "combobox_facilityLoan";
+            this.combobox_facilityLoan.Size = new System.Drawing.Size(201, 36);
+            this.combobox_facilityLoan.TabIndex = 49;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label13.Location = new System.Drawing.Point(30, 142);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(258, 20);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Total number of completed contracts:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label14.Location = new System.Drawing.Point(30, 92);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(263, 20);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "Total number of contracts in progress: ";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label15.Location = new System.Drawing.Point(30, 40);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(57, 20);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "Facility:";
+            // 
+            // textBox_ruleLoan
+            // 
+            this.textBox_ruleLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_ruleLoan.BorderRadius = 20;
+            this.textBox_ruleLoan.BorderThickness = 0;
+            this.textBox_ruleLoan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox_ruleLoan.DefaultText = "";
+            this.textBox_ruleLoan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBox_ruleLoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBox_ruleLoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_ruleLoan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBox_ruleLoan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_ruleLoan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.textBox_ruleLoan.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBox_ruleLoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBox_ruleLoan.Location = new System.Drawing.Point(442, 22);
+            this.textBox_ruleLoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox_ruleLoan.Name = "textBox_ruleLoan";
+            this.textBox_ruleLoan.PasswordChar = '\0';
+            this.textBox_ruleLoan.PlaceholderText = "Type rule";
+            this.textBox_ruleLoan.SelectedText = "";
+            this.textBox_ruleLoan.Size = new System.Drawing.Size(358, 429);
+            this.textBox_ruleLoan.TabIndex = 49;
+            // 
+            // button_setRuleLoan
+            // 
+            this.button_setRuleLoan.BorderRadius = 20;
+            this.button_setRuleLoan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.button_setRuleLoan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.button_setRuleLoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.button_setRuleLoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.button_setRuleLoan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_setRuleLoan.ForeColor = System.Drawing.Color.White;
+            this.button_setRuleLoan.Location = new System.Drawing.Point(513, 473);
+            this.button_setRuleLoan.Name = "button_setRuleLoan";
+            this.button_setRuleLoan.Size = new System.Drawing.Size(222, 47);
+            this.button_setRuleLoan.TabIndex = 48;
+            this.button_setRuleLoan.Text = "Set rule";
+            this.button_setRuleLoan.Click += new System.EventHandler(this.button_setRuleLoan_Click);
+
             // 
             // tabPage_shift
             // 
@@ -620,13 +998,14 @@
             this.button_reset.TabIndex = 4;
             this.button_reset.Text = "Reset";
             this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
+
             // 
             // DirectorMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(1053, 634);
+            this.ClientSize = new System.Drawing.Size(1050, 634);
             this.Controls.Add(this.tabControl_director);
             this.Name = "DirectorMainForm";
             this.Text = "DirectorMainForm";
@@ -640,8 +1019,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listManager)).EndInit();
             this.tabPage_facilityManagement.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listFacility)).EndInit();
+
+            this.tabPage_contractManagement.ResumeLayout(false);
+            this.tabControl_Contract.ResumeLayout(false);
+            this.LongTermContract.ResumeLayout(false);
+            this.groupBox_LongContract.ResumeLayout(false);
+            this.groupBox_LongContract.PerformLayout();
+            this.LoanContract.ResumeLayout(false);
+            this.guna2GroupBox2.ResumeLayout(false);
+            this.guna2GroupBox2.PerformLayout();
+
             this.tabPage_shift.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_listShift)).EndInit();
+
             this.ResumeLayout(false);
 
         }
@@ -681,11 +1071,36 @@
         private Guna.UI2.WinForms.Guna2Button button_removeManager;
         private Guna.UI2.WinForms.Guna2Button button_removeFacility;
         private Guna.UI2.WinForms.Guna2Button button_updateFacility;
+
+        private System.Windows.Forms.TabPage tabPage_contractManagement;
+        private Guna.UI2.WinForms.Guna2TabControl tabControl_Contract;
+        private System.Windows.Forms.TabPage LongTermContract;
+        private System.Windows.Forms.TabPage LoanContract;
+        private Guna.UI2.WinForms.Guna2Button button_setRuleLong;
+        private Guna.UI2.WinForms.Guna2TextBox textBox_ruleLong;
+        private Guna.UI2.WinForms.Guna2GroupBox groupBox_LongContract;
+        private Guna.UI2.WinForms.Guna2Button button_ShowLong;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBox_facilityLong;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
+        private Guna.UI2.WinForms.Guna2Button button_showListLoan;
+        private Guna.UI2.WinForms.Guna2ComboBox combobox_facilityLoan;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private Guna.UI2.WinForms.Guna2TextBox textBox_ruleLoan;
+        private Guna.UI2.WinForms.Guna2Button button_setRuleLoan;
+        private System.Windows.Forms.Label label_totalDone;
+        private System.Windows.Forms.Label label_totalProgress;
+
         private System.Windows.Forms.TabPage tabPage_shift;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button button_resetListShift;
         private Guna.UI2.WinForms.Guna2Button button_addShift;
         private System.Windows.Forms.DataGridView dataGridView_listShift;
         private Guna.UI2.WinForms.Guna2Button button_reset;
+>>>>>>> master
     }
 }
